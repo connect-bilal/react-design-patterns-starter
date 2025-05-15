@@ -2,7 +2,7 @@
   "name": "react-design-patterns-starter",
   "description": "A minimal, clean, and scalable React starter template focused on best practices and modern design patterns. This boilerplate provides a solid foundation for building React applications with TypeScript, emphasizing maintainability, reusability, and performance.",
   "author": "Bilal Ahmad Khan",
-  "Public": true,
+  "private": false,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
@@ -64,5 +64,18 @@
     "extends": [
       "plugin:storybook/recommended"
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/connect-bilal/react-design-patterns-starter.git"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "starter",
+    "template",
+    "boilerplate",
+    "design-patterns",
+    "best-practices"
+  ]
 }
