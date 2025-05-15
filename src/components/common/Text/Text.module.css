@@ -1,0 +1,45 @@
+.text {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+.h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.h4 {
+  font-size: 1.25rem;
+}
+
+.h5 {
+  font-size: 1rem;
+}
+
+.h6 {
+  font-size: 0.875rem;
+}
+
+.p {
+  font-size: 1rem;
+}
+
+.span {
+  font-size: 1rem;
+  color: #cf8910 !important;
+}
