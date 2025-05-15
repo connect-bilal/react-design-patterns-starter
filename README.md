@@ -137,4 +137,22 @@ src/
 └── index.tsx            # Application entry point, rendering <App />
 ```
 
-Work in Progress.....
+## License – Bilal Ahmad Khan
+
+This React starter template is provided free of charge for building personal or commercial products and applications.
+
+✔ You MAY:
+- Use this project to build your own app or product
+- Modify the code as needed
+- Share your own built products
+
+❌ You MAY NOT:
+- Resell, redistribute, or republish this project as a starter template, boilerplate, or development kit
+- Claim ownership of the original project structure for educational or starter purposes
+
+Contact me for permission if you wish to use it as a base for another starter/template.
+
+Author: `Bilal Ahmad Khan`
+
+---
+🚧 Work in Progress… Stay tuned!
