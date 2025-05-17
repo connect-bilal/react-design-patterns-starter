@@ -1,17 +1,21 @@
 :root {
   /* Common colors */
-  --color-normal-bg: #007bff;
-  --color-success-bg: #28a745;
-  --color-danger-bg: #dc3545;
-  --color-warning-bg: #ffc107;
-  --color-info-bg: #17a2b8;
+  --color-normal: #007bff;
+  --color-success: #28a745;
+  --color-danger: #dc3545;
+  --color-warning: #ffc107;
+  --color-info: #17a2b8;
+  --color-muted: #6c757d;
 
+  --color-text-black: #000000;
   --color-normal-text: #fff;
   --color-success-text: #fff;
   --color-danger-text: #fff;
   --color-warning-text: #212529;
   --color-info-text: #fff;
-  --transition-base-duration: 10.3s;
+  
+  --color-bg-primary: #f8f9fa;
+  --transition-base-duration: 0.3s;
   --transition-base-easing: ease;
   --transition-standard:
     opacity var(--transition-base-duration) var(--transition-base-easing),

@@ -43,7 +43,10 @@ const createTextTagStory = (tag: TextProps['as']): Story => {
       as: tag,
       children: `This is a ${label} element`,
       color: '#333',
-      textAlign: 'center',
+      textAlign: undefined,
+      className: '',
+      style: {},
+      family: '',
     },
   };
 };

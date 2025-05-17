@@ -16,7 +16,7 @@ html {
 body {
   font-size: 1rem;
   line-height: 1.5;
-  color: #333;
+  color: var(--color-text-black);
   background-color: #fff;
 }
 
@@ -26,5 +26,5 @@ body::-webkit-scrollbar {
 
 .main {
   box-sizing: border-box;
-  background-color: beige;
+  background-color: var(--color-bg-primary);
 }

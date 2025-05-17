@@ -122,6 +122,10 @@ src/
 ├── assets/              # Static assets like images, fonts, icons, and svgs
 ├── components/          # Reusable UI components following Atomic Design principles
 │   ├── common/          # Base-level atomic components (Button, Text, Container)
+│   │   ├── Button/               # Button component
+│   │   ├── Container/            # Container/layout component
+│   │   ├── Label/                # Label component
+│   │   └── Text/                 # Text/typography component
 │   └── hoc/             # Higher-Order Components
 │       └── withLogging.tsx
 │       └── withAuth.tsx
@@ -136,6 +140,12 @@ src/
 ├── App.tsx              # Root application component
 └── index.tsx            # Application entry point, rendering <App />
 ```
+
+## 📘 Storybook Preview
+
+Explore the live Storybook documentation to see the components in action, following the React Design Patterns used in this project:
+
+🔗 [View Storybook](https://storybook-react-design-patterns.vercel.app)
 
 ## License – Bilal Ahmad Khan
 

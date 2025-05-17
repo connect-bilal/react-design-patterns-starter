@@ -1,0 +1,40 @@
+.label {
+  font-weight: 500;
+  display: inline-block;
+  line-height: 1.5;
+  margin-bottom: 0.25rem;
+  color: var(--color-text-primary);
+}
+
+/* Sizes */
+.sm {
+  font-size: 0.75rem;  /* 12px */
+}
+
+.md {
+  font-size: 0.875rem; /* 14px */
+}
+
+.lg {
+  font-size: 1rem;     /* 16px */
+}
+
+/* States */
+.default {
+  color: var(--color-text-primary);
+}
+
+.error {
+  color: var(--color-danger);
+}
+
+.disabled {
+  color: var(--color-muted);
+  cursor: not-allowed;
+}
+
+/* Required asterisk */
+.required {
+  color: var(--color-danger);
+  margin-left: 0.25rem;
+}

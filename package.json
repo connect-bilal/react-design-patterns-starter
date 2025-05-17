@@ -12,7 +12,7 @@
     "format": "prettier --write .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build -o storybook-react-design-patterns-static"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx,js,jsx}": [

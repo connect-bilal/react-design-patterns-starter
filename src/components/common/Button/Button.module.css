@@ -9,9 +9,8 @@
   transition: var(--transition-standard);
 }
 
-button:hover,
-button:focus {
-  opacity: 0.9;
+button:is(:hover, :focus) {
+  opacity: 0.75;
   outline: none;
 }
 
@@ -43,26 +42,26 @@ button:focus {
 
 /* Variants */
 .primary {
-  background-color: var(--color-normal-bg);
+  background-color: var(--color-normal);
   color: #fff;
 }
 
 .success {
-  background-color: #28a745;
+  background-color: var(--color-success);
   color: #fff;
 }
 
 .danger {
-  background-color: #dc3545;
+  background-color: var(--color-danger);
   color: #fff;
 }
 
 .warning {
-  background-color: #ffc107;
+  background-color: var(--color-warning);
   color: #212529;
 }
 
 .info {
-  background-color: #17a2b8;
+  background-color: var(--color-info);
   color: #fff;
 }
