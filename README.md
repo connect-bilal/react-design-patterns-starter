@@ -6,22 +6,22 @@ A minimal and scalable React starter template focused on best practices and mode
 
 ## Features
 
-- **TypeScript** ready with strict typings  
-- **Atomic design principles** for component organization  
-- **React Hooks** and **Context API** support  
-- Modular and scalable **folder structure**  
-- Reusable UI components: Button, Text, Container, etc.  
-- Scoped styling with **CSS Modules**  
-- **Storybook** integration for isolated UI development  
-- Code quality tools: **ESLint** and **Prettier**  
-- Performance optimizations using **React.memo** and **forwardRef**  
+- **TypeScript** ready with strict typings
+- **Atomic design principles** for component organization
+- **React Hooks** and **Context API** support
+- Modular and scalable **folder structure**
+- Reusable UI components: Button, Text, Container, etc.
+- Scoped styling with **CSS Modules**
+- **Storybook** integration for isolated UI development
+- Code quality tools: **ESLint** and **Prettier**
+- Performance optimizations using **React.memo** and **forwardRef**
 - Easily extendable for routing, state management, and API integration
 
 ---
 
 ### Prerequisites
 
-- Node.js (>=14.x)  
+- Node.js (>=14.x)
 - npm or yarn package manager
 
 ### Installation
@@ -39,7 +39,7 @@ yarn install
 ### Core Dependencies
 
 | Package            | Description                                      |
-|--------------------|--------------------------------------------------|
+| ------------------ | ------------------------------------------------ |
 | `react`            | The core library for building UI components.     |
 | `react-dom`        | React DOM bindings for rendering to the browser. |
 | `react-router-dom` | Declarative routing for React applications.      |
@@ -52,53 +52,53 @@ yarn install
 
 #### 🛠 Build & Tooling
 
-| Package                  | Description                                             |
-|--------------------------|---------------------------------------------------------|
-| `vite`                   | Fast, modern build tool with native ESM support.        |
-| `@vitejs/plugin-react`   | Vite plugin for React.                                  |
-| `vite-tsconfig-paths`    | Supports TypeScript path aliases in Vite.              |
-| `typescript`             | TypeScript language support.                            |
+| Package                | Description                                      |
+| ---------------------- | ------------------------------------------------ |
+| `vite`                 | Fast, modern build tool with native ESM support. |
+| `@vitejs/plugin-react` | Vite plugin for React.                           |
+| `vite-tsconfig-paths`  | Supports TypeScript path aliases in Vite.        |
+| `typescript`           | TypeScript language support.                     |
 
 #### ✅ Linting & Formatting
 
-| Package                      | Description                                        |
-|------------------------------|----------------------------------------------------|
-| `prettier`                   | Opinionated code formatter.                        |
-| `eslint-config-prettier`     | Disables ESLint rules that conflict with Prettier. |
-| `eslint-plugin-import`       | Linting support for ES6+ `import/export` syntax.   |
-| `eslint-plugin-jsx-a11y`     | Accessibility linting for JSX elements.            |
-| `eslint-plugin-react`        | Linting for React components and patterns.         |
-| `eslint-plugin-react-hooks`  | Ensures correct usage of React Hooks.              |
-| `eslint-plugin-react-refresh`| ESLint rules for React Fast Refresh.               |
-| `eslint-plugin-storybook`    | Storybook-specific linting rules.                  |
+| Package                       | Description                                        |
+| ----------------------------- | -------------------------------------------------- |
+| `prettier`                    | Opinionated code formatter.                        |
+| `eslint-config-prettier`      | Disables ESLint rules that conflict with Prettier. |
+| `eslint-plugin-import`        | Linting support for ES6+ `import/export` syntax.   |
+| `eslint-plugin-jsx-a11y`      | Accessibility linting for JSX elements.            |
+| `eslint-plugin-react`         | Linting for React components and patterns.         |
+| `eslint-plugin-react-hooks`   | Ensures correct usage of React Hooks.              |
+| `eslint-plugin-react-refresh` | ESLint rules for React Fast Refresh.               |
+| `eslint-plugin-storybook`     | Storybook-specific linting rules.                  |
 
 #### 🧪 Testing
 
-| Package                   | Description                                      |
-|---------------------------|--------------------------------------------------|
-| `vitest`                  | Vite-native unit testing framework.              |
-| `@vitest/browser`         | Browser-based testing support.                   |
-| `@vitest/coverage-v8`     | Coverage reports using V8 instrumentation.       |
-| `playwright`              | End-to-end testing with modern browser support.  |
+| Package               | Description                                     |
+| --------------------- | ----------------------------------------------- |
+| `vitest`              | Vite-native unit testing framework.             |
+| `@vitest/browser`     | Browser-based testing support.                  |
+| `@vitest/coverage-v8` | Coverage reports using V8 instrumentation.      |
+| `playwright`          | End-to-end testing with modern browser support. |
 
 #### 📚 Storybook (Component Documentation)
 
-| Package                          | Description                                       |
-|----------------------------------|---------------------------------------------------|
-| `@storybook/react`               | Main Storybook package for React.                |
-| `@storybook/react-vite`          | Vite integration with Storybook.                 |
-| `@storybook/addon-essentials`    | Core set of useful addons.                       |
-| `@storybook/experimental-addon-test` | Integrates tests with stories.             |
-| `@storybook/blocks`              | Visual layout and component blocks.              |
-| `@storybook/test`                | Addon to run automated tests on stories.         |
-| `@chromatic-com/storybook`       | Visual testing and deployment with Chromatic.    |
+| Package                              | Description                                   |
+| ------------------------------------ | --------------------------------------------- |
+| `@storybook/react`                   | Main Storybook package for React.             |
+| `@storybook/react-vite`              | Vite integration with Storybook.              |
+| `@storybook/addon-essentials`        | Core set of useful addons.                    |
+| `@storybook/experimental-addon-test` | Integrates tests with stories.                |
+| `@storybook/blocks`                  | Visual layout and component blocks.           |
+| `@storybook/test`                    | Addon to run automated tests on stories.      |
+| `@chromatic-com/storybook`           | Visual testing and deployment with Chromatic. |
 
 #### 🧹 Git Hooks & Commit Hygiene
 
-| Package        | Description                                          |
-|----------------|------------------------------------------------------|
-| `husky`        | Manage Git hooks easily (e.g., pre-commit hooks).    |
-| `lint-staged`  | Run linters only on staged files.                    |
+| Package       | Description                                       |
+| ------------- | ------------------------------------------------- |
+| `husky`       | Manage Git hooks easily (e.g., pre-commit hooks). |
+| `lint-staged` | Run linters only on staged files.                 |
 
 ---
 
@@ -114,9 +114,8 @@ yarn install
 
 ---
 
-
-
 ## Project Structure
+
 ```
 src/
 ├── assets/              # Static assets like images, fonts, icons, and svgs
@@ -152,11 +151,13 @@ Explore the live Storybook documentation to see the components in action, follow
 This React starter template is provided free of charge for building personal or commercial products and applications.
 
 ✔ You MAY:
+
 - Use this project to build your own app or product
 - Modify the code as needed
 - Share your own built products
 
 ❌ You MAY NOT:
+
 - Resell, redistribute, or republish this project as a starter template, boilerplate, or development kit
 - Claim ownership of the original project structure for educational or starter purposes
 
@@ -165,4 +166,5 @@ Contact me for permission if you wish to use it as a base for another starter/te
 Author: `Bilal Ahmad Khan`
 
 ---
+
 🚧 Work in Progress… Stay tuned!

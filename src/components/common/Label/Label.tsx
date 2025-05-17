@@ -15,12 +15,7 @@ const Label = ({
   return (
     <label
       htmlFor={htmlFor}
-      className={classNames(
-        styles.label,
-        styles[size],
-        styles[state],
-        className
-      )}
+      className={classNames(styles.label, styles[size], styles[state], className)}
       {...rest}
     >
       {children}

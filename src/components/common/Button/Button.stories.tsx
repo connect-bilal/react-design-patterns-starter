@@ -11,18 +11,54 @@ const meta: Meta<typeof Button> = {
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',
+    docs: {
+      description: {
+        component:
+          'This `Button` component supports multiple variants and sizes following the design system.',
+      },
+    },
   },
   argTypes: {
     variant: {
-      control: 'select',
+      description: 'Defines the visual style of the button (e.g., primary, success, danger).',
+      control: 'radio',
       options: buttonVariants,
+      table: {
+        type: { summary: buttonVariants.join(' | ') },
+        defaultValue: { summary: 'primary' },
+      },
     },
     size: {
-      control: { type: 'radio' },
+      description: 'Sets the size of the button: small, medium, or large.',
+      control: 'radio',
       options: buttonSizes,
+      table: {
+        type: { summary: buttonSizes.join(' | ') },
+        defaultValue: { summary: 'md' },
+      },
     },
     disabled: {
+      description: 'Disables the button if true.',
       control: 'boolean',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: 'false' },
+      },
+    },
+    children: {
+      description: 'The button label text or content.',
+      control: 'text',
+      table: {
+        defaultValue: { summary: 'Button' },
+      },
+    },
+    onClick: {
+      description: 'Function called when the button is clicked.',
+      table: {
+        type: { summary: '(event: React.MouseEvent<HTMLButtonElement>) => void' },
+        defaultValue: { summary: '() => alert("Button clicked!")' },
+      },
+      control: false,
     },
   },
 };
@@ -38,7 +74,7 @@ const createVariantStory = (variant: ButtonVariant): Story => {
       variant,
       size: 'md',
       disabled: false,
-      children: capitalized,
+      children: 'Button',
       className: 'custom-class',
       onClick: () => alert(`You clicked the ${variant} button!`),
     },

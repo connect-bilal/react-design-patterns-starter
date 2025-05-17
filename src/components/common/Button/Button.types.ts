@@ -1,4 +1,4 @@
-import type { ButtonHTMLAttributes } from "react";
+import type { ButtonHTMLAttributes } from 'react';
 
 // Define allowed values as const arrays (for both runtime and types)
 export const buttonVariants = ['primary', 'success', 'danger', 'warning', 'info'] as const;
@@ -10,6 +10,7 @@ export type ButtonSize = (typeof buttonSizes)[number];
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
+  disabled?: boolean;
   size?: ButtonSize;
   children?: React.ReactNode;
   className?: string;

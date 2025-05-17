@@ -5,7 +5,7 @@ import type { ButtonProps } from './Button.types';
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { variant = 'primary', children = 'button', size = 'md', disabled, className, ...rest },
+    { variant = 'primary', children = 'Button', size = 'md', disabled, className, ...rest },
     ref,
   ) => {
     const btnClass = classNames(styles.button, styles[variant], styles[size], className);
