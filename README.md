@@ -45,7 +45,7 @@ yarn install
 | `react-router-dom` | Declarative routing for React applications.      |
 | `react-helmet`     | Manage document head for SEO optimization.       |
 | `classnames`       | Utility for conditionally joining class names.   |
-
+| `react-icons`       | Popular icons (FontAwesome, Material, etc.) as React components.   |
 ---
 
 ### Dev Dependencies
@@ -163,7 +163,8 @@ This React starter template is provided free of charge for building personal or 
 
 Contact me for permission if you wish to use it as a base for another starter/template.
 
-Author: `Bilal Ahmad Khan`
+- Author: `Bilal Ahmad Khan`
+- Email: `bilal.inform@gmail.com`
 
 ---
 

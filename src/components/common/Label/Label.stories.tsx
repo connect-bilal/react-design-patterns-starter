@@ -10,6 +10,7 @@ const meta: Meta<typeof Label> = {
   args: {
     children: 'Username',
     htmlFor: 'username',
+    required: false
   },
   parameters: {
     layout: 'centered',

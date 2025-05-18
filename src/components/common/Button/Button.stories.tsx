@@ -1,9 +1,29 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import Button from './Button';
 import { capitalize } from '../../../utils/utility';
-import { buttonVariants, buttonSizes } from './Button.types';
-import type { ButtonVariant } from './Button.types';
+import { buttonVariants, buttonSizes, iconPositions } from './Button.types';
+import type { ButtonProps } from './Button.types';
+import { FaTrash, FaSave, FaDownload } from 'react-icons/fa';
 import '../../../styles/variables.css';
+
+const iconOptions = {
+  None: undefined,
+  Download: <FaDownload />,
+  Save: <FaSave />,
+  Trash: <FaTrash />,
+};
+
+const defaultArgs = {
+  variant: 'primary',
+  size: 'md',
+  disabled: false,
+  isLoading: false,
+  fullWidth: false,
+  children: 'Button',
+  icon: undefined,
+  iconPosition: 'left',
+  className: '',
+} as const satisfies Partial<ButtonProps>;
 
 const meta: Meta<typeof Button> = {
   title: 'Components/Button',
@@ -14,7 +34,7 @@ const meta: Meta<typeof Button> = {
     docs: {
       description: {
         component:
-          'This `Button` component supports multiple variants and sizes following the design system.',
+          'This `Button` component supports multiple variants, sizes, icons, full width layout, and loading states.',
       },
     },
   },
@@ -60,29 +80,102 @@ const meta: Meta<typeof Button> = {
       },
       control: false,
     },
+    icon: {
+      description: 'Optional icon element (ReactNode).',
+      control: {
+        type: 'select',
+        labels: {
+          None: 'No icon',
+          Download: '⬇️ Download',
+          Save: '💾 Save',
+          Trash: '🗑️ Trash',
+        },
+      },
+      options: Object.keys(iconOptions),
+      mapping: iconOptions,
+      table: {
+        type: { summary: 'ReactNode' },
+        defaultValue: { summary: 'null' },
+      },
+    },
+    iconPosition: {
+      description: 'Position of the icon relative to the label.',
+      control: 'radio',
+      options: iconPositions,
+      table: {
+        type: { summary: iconPositions.join(' | ') },
+        defaultValue: { summary: 'left' },
+      },
+    },
+    isLoading: {
+      description: 'Displays a loading spinner in place of icon.',
+      control: 'boolean',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: 'false' },
+      },
+    },
+    fullWidth: {
+      description: 'Expands the button to take full width.',
+      control: 'boolean',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: 'false' },
+      },
+    },
+
+    className: {
+      description: 'Optional CSS class to apply additional custom styles.',
+      table: {
+        type: { summary: 'string' },
+      },
+      control: 'text',
+    },
   },
 };
 
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-const createVariantStory = (variant: ButtonVariant): Story => {
-  const capitalized = capitalize(variant);
-  return {
-    name: capitalized,
-    args: {
-      variant,
-      size: 'md',
-      disabled: false,
-      children: 'Button',
-      className: 'custom-class',
-      onClick: () => alert(`You clicked the ${variant} button!`),
-    },
-  };
-};
+// Helper to create stories dynamically
+const createStory = (
+  overrides: Partial<React.ComponentProps<typeof Button>>,
+  name?: string,
+): Story => ({
+  name: name ?? capitalize((overrides.variant ?? '') as string),
+  args: {
+    ...defaultArgs,
+    ...overrides,
+    onClick: () => alert(`You clicked the ${overrides.variant} button!`),
+  },
+});
 
-export const Primary = createVariantStory('primary');
-export const Success = createVariantStory('success');
-export const Danger = createVariantStory('danger');
-export const Warning = createVariantStory('warning');
-export const Info = createVariantStory('info');
+// Variant Stories
+export const Primary = createStory({ variant: 'primary' });
+export const Success = createStory({ variant: 'success' });
+export const Danger = createStory({ variant: 'danger' });
+export const Warning = createStory({ variant: 'warning' });
+export const Info = createStory({ variant: 'info' });
+
+// Other Variations
+export const IconButton = createStory({
+  children: 'Icon Button',
+  icon: <FaDownload />,
+});
+
+export const LoadingButton = createStory({
+  children: 'Loading Button',
+  isLoading: true,
+});
+
+export const FullWidthButton = createStory({
+  variant: 'primary',
+  children: 'Full Width Button',
+  fullWidth: true,
+});
+
+export const DisabledButton = createStory({
+  variant: 'primary',
+  children: 'Disabled Button',
+  disabled: true,
+});
