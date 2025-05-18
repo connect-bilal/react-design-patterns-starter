@@ -22,4 +22,6 @@ export const labelDefaultProps = {
   size: 'md',
   state: 'default',
   className: '',
-} satisfies Required<Pick<LabelProps, 'children' | 'htmlFor' | 'required' | 'size' | 'state' | 'className'>>;
+} satisfies Required<
+  Pick<LabelProps, 'children' | 'htmlFor' | 'required' | 'size' | 'state' | 'className'>
+>;

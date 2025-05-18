@@ -77,7 +77,7 @@ export const Default: Story = {};
 
 const createStory = (
   overrides: Partial<React.ComponentProps<typeof Label>>,
-  name?: string
+  name?: string,
 ): Story => ({
   name: name ?? overrides.htmlFor ?? 'Custom Label',
   args: {
