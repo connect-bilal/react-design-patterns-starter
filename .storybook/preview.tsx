@@ -11,7 +11,7 @@ const preview: Preview = {
     },
   },
   decorators: [
-    (Story) => (
+    Story => (
       <div
         style={{
           width: '100vw',

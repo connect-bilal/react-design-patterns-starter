@@ -102,21 +102,6 @@ button:is(:hover, :focus) {
   flex-direction: column-reverse;
 }
 
-.loader {
-  width: 1rem;
-  height: 1rem;
-  border: 2px solid #fff;
-  border-top-color: transparent;
-  border-radius: 50%;
-  animation: spin 0.6s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .spinner {
   border: 2px solid transparent;
   border-top: 2px solid white;

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Button from './Button';
 import { capitalize } from '../../../utils/utility';
 import { buttonVariants, buttonSizes, iconPositions } from './Button.types';
-import type { ButtonProps } from './Button.types';
+import { buttonDefaultProps } from './Button.types';
 import { FaTrash, FaSave, FaDownload } from 'react-icons/fa';
 import '../../../styles/variables.css';
 
@@ -12,18 +12,6 @@ const iconOptions = {
   Save: <FaSave />,
   Trash: <FaTrash />,
 };
-
-const defaultArgs = {
-  variant: 'primary',
-  size: 'md',
-  disabled: false,
-  isLoading: false,
-  fullWidth: false,
-  children: 'Button',
-  icon: undefined,
-  iconPosition: 'left',
-  className: '',
-} as const satisfies Partial<ButtonProps>;
 
 const meta: Meta<typeof Button> = {
   title: 'Components/Button',
@@ -144,7 +132,7 @@ const createStory = (
 ): Story => ({
   name: name ?? capitalize((overrides.variant ?? '') as string),
   args: {
-    ...defaultArgs,
+    ...buttonDefaultProps,
     ...overrides,
     onClick: () => alert(`You clicked the ${overrides.variant} button!`),
   },

@@ -38,14 +38,15 @@ yarn install
 
 ### Core Dependencies
 
-| Package            | Description                                      |
-| ------------------ | ------------------------------------------------ |
-| `react`            | The core library for building UI components.     |
-| `react-dom`        | React DOM bindings for rendering to the browser. |
-| `react-router-dom` | Declarative routing for React applications.      |
-| `react-helmet`     | Manage document head for SEO optimization.       |
-| `classnames`       | Utility for conditionally joining class names.   |
-| `react-icons`       | Popular icons (FontAwesome, Material, etc.) as React components.   |
+| Package            | Description                                                      |
+| ------------------ | ---------------------------------------------------------------- |
+| `react`            | The core library for building UI components.                     |
+| `react-dom`        | React DOM bindings for rendering to the browser.                 |
+| `react-router-dom` | Declarative routing for React applications.                      |
+| `react-helmet`     | Manage document head for SEO optimization.                       |
+| `classnames`       | Utility for conditionally joining class names.                   |
+| `react-icons`      | Popular icons (FontAwesome, Material, etc.) as React components. |
+
 ---
 
 ### Dev Dependencies
