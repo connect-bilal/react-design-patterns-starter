@@ -1,17 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import Label from './Label';
-import { labelStates, labelSizes } from './Label.types';
-import '../../../styles/variables.css';
+import { labelStates, labelSizes, labelDefaultProps } from './Label.types';
 
 const meta: Meta<typeof Label> = {
   title: 'Components/Form/Label',
   component: Label,
   tags: ['autodocs'],
-  args: {
-    children: 'Username',
-    htmlFor: 'username',
-    required: false
-  },
+  args: labelDefaultProps,
   parameters: {
     layout: 'centered',
     docs: {
@@ -80,38 +75,31 @@ type Story = StoryObj<typeof Label>;
 
 export const Default: Story = {};
 
-const StoryWrapper = ({ children }: { children: React.ReactNode }) => (
-  <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>{children}</div>
-);
-
-export const Sizes: Story = {
-  render: () => (
-    <StoryWrapper>
-      {labelSizes.map(size => (
-        <Label key={size} htmlFor={size} size={size}>
-          {`${size.charAt(0).toUpperCase() + size.slice(1)} Label`}
-        </Label>
-      ))}
-    </StoryWrapper>
-  ),
-};
-
-export const States: Story = {
-  render: () => (
-    <StoryWrapper>
-      {labelStates.map(state => (
-        <Label key={state} htmlFor={state} state={state}>
-          {state.charAt(0).toUpperCase() + state.slice(1)}
-        </Label>
-      ))}
-    </StoryWrapper>
-  ),
-};
-
-export const Required: Story = {
+const createStory = (
+  overrides: Partial<React.ComponentProps<typeof Label>>,
+  name?: string
+): Story => ({
+  name: name ?? overrides.htmlFor ?? 'Custom Label',
   args: {
-    required: true,
-    children: 'Email Address',
-    htmlFor: 'email',
+    ...labelDefaultProps,
+    ...overrides,
   },
-};
+});
+
+export const RequiredLabel = createStory({
+  required: true,
+  children: 'Required Label',
+  htmlFor: 'email',
+});
+
+export const DisabledLabel = createStory({
+  size: 'lg',
+  children: 'Disabled Label',
+  state: 'disabled',
+});
+
+export const ErrorLabel = createStory({
+  size: 'lg',
+  children: 'Error Label',
+  state: 'error',
+});

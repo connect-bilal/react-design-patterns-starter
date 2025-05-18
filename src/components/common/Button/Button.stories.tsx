@@ -4,7 +4,6 @@ import { capitalize } from '../../../utils/utility';
 import { buttonVariants, buttonSizes, iconPositions } from './Button.types';
 import { buttonDefaultProps } from './Button.types';
 import { FaTrash, FaSave, FaDownload } from 'react-icons/fa';
-import '../../../styles/variables.css';
 
 const iconOptions = {
   None: undefined,

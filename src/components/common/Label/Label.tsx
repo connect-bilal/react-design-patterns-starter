@@ -1,15 +1,16 @@
 import { memo } from 'react';
 import classNames from 'classnames';
 import styles from './Label.module.css';
+import { labelDefaultProps } from './Label.types';
 import type { LabelProps } from './Label.types';
 
 const Label = ({
-  children,
-  htmlFor,
-  required = false,
-  size = 'md',
-  state = 'default',
-  className,
+  children = labelDefaultProps.children,
+  htmlFor = labelDefaultProps.htmlFor,
+  required = labelDefaultProps.required,
+  size = labelDefaultProps.size,
+  state = labelDefaultProps.state,
+  className = labelDefaultProps.className,
   ...rest
 }: LabelProps) => {
   return (

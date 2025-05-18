@@ -15,7 +15,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
   size?: ButtonSize;
   children?: ReactNode;
-  icon?: ReactNode | undefined;
+  icon?: ReactNode;
   iconPosition?: IconPosition;
   isLoading?: boolean;
   fullWidth?: boolean;
