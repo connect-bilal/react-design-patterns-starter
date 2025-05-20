@@ -1,0 +1,22 @@
+.icon {
+  display: inline-flex;
+  place-items: center; 
+  cursor: inherit;
+  line-height: 0;
+  flex-shrink: 0;
+  user-select: none;
+  fill: currentColor;
+  transition: var(--transition-standard);
+}
+
+/* Color variants */
+.icon-primary { color: var(--color-normal); }
+.icon-success { color: var(--color-success); }
+.icon-danger  { color: var(--color-danger); }
+.icon-warning { color: var(--color-warning); }
+.icon-info    { color: var(--color-info); }
+
+/* Sizes */
+.icon-sm { width: 16px; height: 16px; }
+.icon-md { width: 24px; height: 24px; }
+.icon-lg { width: 32px; height: 32px; }
