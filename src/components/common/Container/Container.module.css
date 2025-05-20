@@ -3,26 +3,26 @@
   margin: 0 auto;
   padding: 1rem;
   box-sizing: border-box;
-  background-color: azure;
+  background-color: var(--color-bg-container);
 }
 
 /* Max width classes */
 .sm {
-  max-width: 640px;
+  max-width: var(--max-width-sm);
 }
 
 .md {
-  max-width: 768px;
+  max-width: var(--max-width-md);
 }
 
 .lg {
-  max-width: 1024px;
+  max-width: var(--max-width-lg);
 }
 
 .xl {
-  max-width: 1280px;
+  max-width: var(--max-width-xl);
 }
 
 .xxl {
-  max-width: 2500px;
+  max-width: var(--max-width-xxl);
 }

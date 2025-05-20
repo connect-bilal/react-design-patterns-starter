@@ -147,7 +147,7 @@ export const Info = createStory({ variant: 'info' });
 // Other Variations
 export const IconButton = createStory({
   children: 'Icon Button',
-  icon: <FaDownload />,
+  icon: FaDownload,
 });
 
 export const LoadingButton = createStory({

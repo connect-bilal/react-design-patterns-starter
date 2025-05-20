@@ -1,45 +1,43 @@
 .text {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  color: #333;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-md);
+  color: var(--color-text-primary);
   text-align: left;
   margin: 0;
   padding: 0;
-  font-weight: normal;
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
 }
 
 .h1 {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
 }
 
 .h2 {
-  font-size: 1.75rem;
-  font-weight: bold;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
 }
 
 .h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
 }
 
 .h4 {
-  font-size: 1.25rem;
+  font-size: var(--font-size-md);
 }
 
 .h5 {
-  font-size: 1rem;
+  font-size: var(--font-size-sm);
 }
 
 .h6 {
-  font-size: 0.875rem;
+  font-size: var(--font-size-xs);
 }
 
-.p {
-  font-size: 1rem;
-}
-
+.p,
 .span {
-  font-size: 1rem;
-  color: #cf8910 !important;
+  font-size: var(--font-size-md);
 }

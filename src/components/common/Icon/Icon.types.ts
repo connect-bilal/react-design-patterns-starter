@@ -1,13 +1,11 @@
-import type { IconBaseProps } from 'react-icons';
-
-export const iconVariants = ['primary', 'success', 'danger', 'warning', 'info'] as const;
+export const iconVariants = ['primary', 'success', 'danger', 'warning', 'info', 'button'] as const;
 export const iconSizes = ['sm', 'md', 'lg'] as const;
 
 export type IconVariant = (typeof iconVariants)[number];
 export type IconSize = (typeof iconSizes)[number];
 
 export interface IconProps {
-  icon: React.ComponentType<IconBaseProps>;
+  icon: React.ElementType;
   size?: IconSize;
   variant?: IconVariant;
   className?: string;

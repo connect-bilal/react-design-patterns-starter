@@ -14,8 +14,9 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
   disabled?: boolean;
   size?: ButtonSize;
+  iconSize?: ButtonSize;
   children?: ReactNode;
-  icon?: ReactNode;
+  icon?: React.ElementType;
   iconPosition?: IconPosition;
   isLoading?: boolean;
   fullWidth?: boolean;
@@ -26,10 +27,10 @@ export const buttonDefaultProps = {
   variant: 'primary',
   children: 'Button',
   size: 'md',
+  iconSize: 'sm',
   disabled: false,
   isLoading: false,
   fullWidth: false,
-  icon: null,
   iconPosition: 'left',
   className: '',
 } satisfies Required<
@@ -38,10 +39,10 @@ export const buttonDefaultProps = {
     | 'variant'
     | 'children'
     | 'size'
+    | 'iconSize'
     | 'disabled'
     | 'isLoading'
     | 'fullWidth'
-    | 'icon'
     | 'iconPosition'
     | 'className'
   >

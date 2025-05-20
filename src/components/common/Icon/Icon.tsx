@@ -1,5 +1,6 @@
 import { forwardRef, memo } from 'react';
 import styles from './icon.module.css';
+import { getIconComponent } from './Icon.helper';
 import { iconDefaultProps } from './Icon.types';
 import type { IconProps } from './Icon.types';
 
@@ -22,19 +23,23 @@ const Icon = forwardRef<SVGSVGElement, IconProps>(
       .filter(Boolean)
       .join(' ');
 
-    const IconComponent = icon;
+    const IconComponent = (
+      typeof icon === 'string' ? getIconComponent(icon) : icon
+    ) as React.ElementType;
+
+    if (!IconComponent) return null;
     const isHidden = ariaHidden ?? !ariaLabel;
 
     return (
       <IconComponent
-        title={title}
         className={classNames}
         style={style}
         aria-label={ariaLabel}
         aria-hidden={isHidden}
+        title={title}
+        ref={ref}
         {...rest}
-        {...(typeof icon === 'string' ? { ref } : {})}
-      />
+      ></IconComponent>
     );
   },
 );

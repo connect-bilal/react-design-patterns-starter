@@ -1,3 +1,4 @@
+/* Reset & Base Layout */
 html,
 body,
 .main {
@@ -5,26 +6,37 @@ body,
   padding: 0;
   height: 100%;
   width: 100%;
+  box-sizing: border-box;
 }
 
-html {
-  font-size: 16px;
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+/* Inherit box-sizing to all elements */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
+/* Body Global Styling */
 body {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: var(--color-text-black);
-  background-color: #fff;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
   width: 8px;
 }
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-muted, #aaa);
+  border-radius: 4px;
+}
 
 .main {
-  box-sizing: border-box;
-  background-color: var(--color-bg-primary);
+  background-color: var(--color-bg-surface);
 }

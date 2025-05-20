@@ -8,11 +8,11 @@
   border: none;
   border-radius: 4px;
 
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
   cursor: pointer;
 
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow);
   transition: var(--transition-standard);
 }
 
@@ -26,19 +26,20 @@ button:is(:hover, :focus) {
   opacity: 0.85;
 }
 
+/* Sizes */
 .sm {
-  font-size: 12px;
-  padding: 4px 10px;
+  font-size: var(--font-size-sm);
+  padding: 0.25rem 0.625rem;
 }
 
 .md {
-  font-size: 14px;
-  padding: 8px 16px;
+  font-size: var(--font-size-md);
+  padding: 0.5rem 1rem;
 }
 
 .lg {
-  font-size: 16px;
-  padding: 12px 20px;
+  font-size: var(--font-size-lg);
+  padding: 0.75rem 1.25rem;
 }
 
 .fullWidth {
@@ -55,34 +56,28 @@ button:is(:hover, :focus) {
 
 /* Variants */
 .primary {
-  background-color: var(--color-normal);
-  color: #fff;
+  background-color: var(--color-theme);
+  color: var(--color-text-on-primary);
 }
 
 .success {
   background-color: var(--color-success);
-  color: #fff;
+  color: var(--color-text-on-success);
 }
 
 .danger {
   background-color: var(--color-danger);
-  color: #fff;
+  color: var(--color-text-on-danger);
 }
 
 .warning {
   background-color: var(--color-warning);
-  color: #212529;
+  color: var(--color-text-on-warning);
 }
 
 .info {
   background-color: var(--color-info);
-  color: #fff;
-}
-
-.icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  color: var(--color-text-on-info);
 }
 
 /* Icon positioning */
@@ -102,16 +97,12 @@ button:is(:hover, :focus) {
   flex-direction: column-reverse;
 }
 
-.spinner {
-  border: 2px solid transparent;
-  border-top: 2px solid white;
-  border-right: 2px solid white;
-  border-radius: 50%;
-  width: 1em;
-  height: 1em;
-  animation: spin 0.6s linear infinite;
+/* Loading spinner */
+.loadingIcon {
+  animation: spin 3.9s linear infinite;
   display: inline-block;
-  margin-right: 0.5em;
+  vertical-align: middle;
+  color: inherit;
 }
 
 @keyframes spin {

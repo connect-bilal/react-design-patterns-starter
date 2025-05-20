@@ -11,31 +11,41 @@
 
 /* Color variants */
 .icon-primary {
-  color: var(--color-normal);
+  color: var(--color-primary);
 }
+
 .icon-success {
   color: var(--color-success);
 }
+
 .icon-danger {
   color: var(--color-danger);
 }
+
 .icon-warning {
   color: var(--color-warning);
 }
+
 .icon-info {
   color: var(--color-info);
 }
 
+.icon-button {
+  color: var(--color-text-on-primary);
+}
+
 /* Sizes */
 .icon-sm {
-  width: 16px;
-  height: 16px;
+  width: var(--icon-size-sm);
+  height: var(--icon-size-sm);
 }
+
 .icon-md {
-  width: 24px;
-  height: 24px;
+  width: var(--icon-size-md);
+  height: var(--icon-size-md);
 }
+
 .icon-lg {
-  width: 32px;
-  height: 32px;
+  width: var(--icon-size-lg);
+  height: var(--icon-size-lg);
 }

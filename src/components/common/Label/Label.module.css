@@ -1,22 +1,22 @@
 .label {
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   display: inline-block;
-  line-height: 1.5;
+  line-height: var(--line-height-base);
   margin-bottom: 0.25rem;
   color: var(--color-text-primary);
 }
 
 /* Sizes */
 .sm {
-  font-size: 0.75rem; /* 12px */
+  font-size: var(--font-size-sm);
 }
 
 .md {
-  font-size: 0.875rem; /* 14px */
+  font-size: var(--font-size-md);
 }
 
 .lg {
-  font-size: 1rem; /* 16px */
+  font-size: var(--font-size-lg);
 }
 
 /* States */
