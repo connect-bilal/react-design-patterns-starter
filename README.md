@@ -136,10 +136,15 @@ src/
 │   │   └── Text/                 # Text/typography component
 │   │   ├── Icon/                 # Icon component with SVG support
 │   │   └── Link/                 # Link component with external/internal support
+│   │   └── Toggle/               # Toggle component for switch or checkbox functionality
+│   │   └── ThemeSwitcher/        # Wrapper component using Toggle & ThemeContext
 │   └── hoc/             # Higher-Order Components
 │       └── withLogging.tsx
 │       └── withAuth.tsx
 ├── constants/           # Application-wide constants, enums, and configuration values
+├── context/                # Global app state with React context
+│   ├── ThemeContext.tsx    # Theme context (light/dark toggle)
+│   |── index.ts            # Barrel export (optional)
 ├── hooks/               # Custom React hooks for shared logic across app
 ├── pages/               # Route-level components (pages/screens)
 ├── services/            # API calls, business logic

@@ -5,7 +5,7 @@ import Toggle from './Toggle';
 import { toggleDefaultProps } from './Toggle.types';
 
 const meta: Meta<typeof Toggle> = {
-  title: 'Features/Toggle',
+  title: 'Common/Toggle',
   component: Toggle,
   tags: ['autodocs'],
   args: toggleDefaultProps,

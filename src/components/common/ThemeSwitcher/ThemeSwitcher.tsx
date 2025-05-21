@@ -1,4 +1,4 @@
-import Toggle from '../../common/Toggle';
+import Toggle from '../Toggle';
 import { useTheme } from '../../../hooks/useTheme';
 import { useMemo } from 'react';
 
