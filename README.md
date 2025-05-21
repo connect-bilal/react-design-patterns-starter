@@ -34,6 +34,14 @@ npm install
 yarn install
 ```
 
+### Customize to Fit Your Needs
+
+- 🔧 Update global styles and themes in `src/styles/`
+- 🎨 Modify or extend atomic components in `src/common/`
+- 🧱 Create new features using the pre-defined folder structure and design patterns
+- 💄 Adjust CSS modules or add your preferred styling solution
+- 📖 Check the [Storybook documentation](https://storybook-react-design-patterns.vercel.app) to explore available components and see usage examples for each one
+
 ## 📦 Included Dependencies
 
 ### Core Dependencies
@@ -126,6 +134,8 @@ src/
 │   │   ├── Container/            # Container/layout component
 │   │   ├── Label/                # Label component
 │   │   └── Text/                 # Text/typography component
+│   │   ├── Icon/                 # Icon component with SVG support
+│   │   └── Link/                 # Link component with external/internal support
 │   └── hoc/             # Higher-Order Components
 │       └── withLogging.tsx
 │       └── withAuth.tsx

@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Text from './Text';
 import type { TextProps } from './Text.types';
 import { textTags } from './Text.types';
+import { textDefaultProps } from './Text.types';
 import '../../../styles/variables.css';
 
 const meta: Meta<typeof Text> = {
@@ -10,8 +11,13 @@ const meta: Meta<typeof Text> = {
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',
+    docs: {
+      description: {
+        component:
+          'The `Text` component renders styled semantic HTML text elements (`h1`, `p`, `span`, etc.) with support for color, alignment, and font customization.',
+      },
+    },
   },
-
   argTypes: {
     as: {
       description: 'Specifies the HTML tag to render (e.g., h1, p, span).',
@@ -49,13 +55,6 @@ const meta: Meta<typeof Text> = {
         defaultValue: { summary: '{}' },
       },
     },
-    family: {
-      description: 'Sets a custom font family (e.g., Roboto, Arial).',
-      control: 'text',
-      table: {
-        type: { summary: 'string' },
-      },
-    },
     className: {
       description: 'Custom class name for additional styling.',
       control: 'text',
@@ -66,27 +65,25 @@ const meta: Meta<typeof Text> = {
 export default meta;
 type Story = StoryObj<typeof Text>;
 
-const createTextTagStory = (tag: TextProps['as']): Story => {
-  const label = typeof tag === 'string' ? tag.toUpperCase() : 'TEXT';
+// Helper to create stories dynamically
+const createTextTagStory = (overrides: Partial<TextProps> = {}): Story => {
+  const tag = typeof overrides.as === 'string' ? overrides.as.toUpperCase() : 'TEXT';
+
   return {
-    name: label,
+    name: tag,
     args: {
-      as: tag,
-      children: `This is an element`,
-      color: '#333',
-      textAlign: undefined,
-      className: '',
-      style: {},
-      family: '',
+      ...textDefaultProps,
+      ...overrides,
     },
   };
 };
 
-export const Span = createTextTagStory('span');
-export const Paragraph = createTextTagStory('p');
-export const H1 = createTextTagStory('h1');
-export const H2 = createTextTagStory('h2');
-export const H3 = createTextTagStory('h3');
-export const H4 = createTextTagStory('h4');
-export const H5 = createTextTagStory('h5');
-export const H6 = createTextTagStory('h6');
+// Stories
+export const Span = createTextTagStory({ as: 'span', children: 'This is a <span> element' });
+export const Paragraph = createTextTagStory({ as: 'p', children: 'This is a <p> element' });
+export const H1 = createTextTagStory({ as: 'h1', children: 'This is a <h1> element' });
+export const H2 = createTextTagStory({ as: 'h2', children: 'This is a <h2> element' });
+export const H3 = createTextTagStory({ as: 'h3', children: 'This is a <h3> element' });
+export const H4 = createTextTagStory({ as: 'h4', children: 'This is a <h4> element' });
+export const H5 = createTextTagStory({ as: 'h5', children: 'This is a <h5> element' });
+export const H6 = createTextTagStory({ as: 'h6', children: 'This is a <h6> element' });

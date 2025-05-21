@@ -1,0 +1,88 @@
+/* Container for the toggle switch and label */
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  transition: var(--transition-standard);
+}
+
+/* Styles for disabled toggle state */
+.toggleDisabled {
+  cursor: not-allowed;
+  opacity: var(--opacity-disabled);
+}
+
+/* Checkbox style */
+.checkbox {
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid var(--color-muted);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-surface);
+  position: relative;
+  flex-shrink: 0;
+  transition: var(--transition-standard);
+}
+
+/* Checkmark for checkbox uses theme color */
+.checkboxChecked::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 4px;
+  height: 9px;
+  border: solid var(--color-theme);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Switch style */
+.switch {
+  position: relative;
+  width: 36px;
+  height: 20px;
+  background: var(--color-muted);
+  border-radius: var(--radius-lg);
+  flex-shrink: 0;
+  transition: var(--transition-standard);
+}
+
+/* Background color for the switch when it's checked (active) */
+.switchChecked {
+  background: var(--color-theme);
+}
+
+/* The circular thumb inside the switch */
+.switchThumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background: var(--color-bg-surface);
+  border-radius: 50%;
+  transition: var(--transition-standard);
+}
+
+/* Moves the toggle thumb to the right when the switch is checked */
+.switchCheckedThumb {
+  left: 18px;
+}
+
+/* Label text */
+.labelText {
+  margin: 0;
+  line-height: 1;
+  margin-left: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+}
+
+/* Adds space between the label on the left and the toggle */
+.labelLeft {
+  margin-right: 0.5rem;
+}

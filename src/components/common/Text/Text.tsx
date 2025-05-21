@@ -1,16 +1,17 @@
 import { forwardRef, memo } from 'react';
 import classNames from 'classnames';
-import styles from './Text.module.css';
+import { textDefaultProps } from './Text.types';
 import type { TextProps } from './Text.types';
+import styles from './Text.module.css';
 
 const Text = forwardRef<HTMLElement, TextProps>(
   (
     {
-      as: Component = 'p',
-      children = '',
-      className = '',
-      color = '#000',
+      as: Component = textDefaultProps.as,
+      color = 'var(--color-text-primary)',
       textAlign = 'left',
+      className,
+      children,
       style,
       ...rest
     },
