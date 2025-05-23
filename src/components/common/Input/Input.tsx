@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
 import Label from '../Label';
-import { inputDefaultProps, isValidInputType } from './Input.types';
+import { inputDefaultProps, isValidInputType, allowIcons } from './Input.types';
 import { getValidationRules, generateIdFromLabel } from './Input.helper';
 import type { InputProps } from './Input.types';
 import styles from './Input.module.css';
@@ -50,8 +50,8 @@ const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
         className={classNames(
           styles.inputContainer,
           statusClass,
-          iconStart || iconEnd ? styles.withIcon : '',
-          iconPosition === 'right' ? styles.iconRight : styles.iconLeft,
+          allowIcons(inputType) && (iconStart || iconEnd) ? styles.withIcon : '',
+          allowIcons(inputType) && iconPosition === 'right' ? styles.iconRight : styles.iconLeft,
         )}
       >
         {iconStart && <Icon className={styles.icon} icon={iconStart} />}

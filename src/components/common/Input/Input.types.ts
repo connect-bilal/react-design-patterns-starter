@@ -11,9 +11,7 @@ export const InputTypes = [
   'number',
   'password',
   'range',
-  'reset',
   'search',
-  'submit',
   'tel',
   'text',
   'time',
@@ -46,3 +44,9 @@ export const inputDefaultProps = {
 export function isValidInputType(type: string): type is InputType {
   return InputTypes.includes(type as InputType);
 }
+
+const noIconTypes = ['color', 'date', 'datetime-local', 'month', 'time', 'week', 'file', 'range'];
+
+export const allowIcons = (type: InputType): boolean => {
+  return !noIconTypes.includes(type);
+};
