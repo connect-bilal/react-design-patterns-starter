@@ -3,14 +3,7 @@ import Button from './Button';
 import { capitalize } from '../../../utils/utility';
 import { buttonVariants, buttonSizes, iconPositions } from './Button.types';
 import { buttonDefaultProps } from './Button.types';
-import { FaTrash, FaSave, FaDownload } from 'react-icons/fa';
-
-const iconOptions = {
-  None: undefined,
-  Download: <FaDownload />,
-  Save: <FaSave />,
-  Trash: <FaTrash />,
-};
+import { FaDownload } from 'react-icons/fa';
 
 const meta: Meta<typeof Button> = {
   title: 'Components/Button',
@@ -66,24 +59,6 @@ const meta: Meta<typeof Button> = {
         defaultValue: { summary: '() => alert("Button clicked!")' },
       },
       control: false,
-    },
-    icon: {
-      description: 'Optional icon element (ReactNode).',
-      control: {
-        type: 'select',
-        labels: {
-          None: 'No icon',
-          Download: '⬇️ Download',
-          Save: '💾 Save',
-          Trash: '🗑️ Trash',
-        },
-      },
-      options: Object.keys(iconOptions),
-      mapping: iconOptions,
-      table: {
-        type: { summary: 'ReactNode' },
-        defaultValue: { summary: 'null' },
-      },
     },
     iconPosition: {
       description: 'Position of the icon relative to the label.',
