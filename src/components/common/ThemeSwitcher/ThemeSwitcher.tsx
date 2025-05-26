@@ -1,6 +1,7 @@
-import Toggle from '../Toggle';
-import { useTheme } from '../../../hooks/useTheme';
 import { useMemo } from 'react';
+
+import { useTheme } from '../../../hooks/useTheme';
+import Toggle from '../Toggle';
 
 const ThemeSwitcher = () => {
   const { theme, toggleTheme } = useTheme();

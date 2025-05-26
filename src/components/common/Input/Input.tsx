@@ -1,10 +1,12 @@
 import { forwardRef } from 'react';
-import Label from '../Label';
-import { inputDefaultProps, isValidInputType, allowIcons } from './Input.types';
-import { getValidationRules, generateIdFromLabel } from './Input.helper';
-import type { InputProps } from './Input.types';
-import styles from './Input.module.css';
+
 import Icon from '../Icon';
+import Label from '../Label';
+
+import { getValidationRules, generateIdFromLabel } from './Input.helper';
+import styles from './Input.module.css';
+import { inputDefaultProps, isValidInputType, allowIcons } from './Input.types';
+import type { InputProps } from './Input.types';
 
 function classNames(...classes: (string | undefined | false)[]) {
   return classes.filter(Boolean).join(' ');

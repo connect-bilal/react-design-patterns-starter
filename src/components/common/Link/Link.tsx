@@ -1,5 +1,6 @@
-import { memo } from 'react';
 import classNames from 'classnames';
+import { memo } from 'react';
+
 import styles from './Link.module.css';
 import { linkDefaultProps } from './Link.types';
 import type { LinkProps } from './Link.types';

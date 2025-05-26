@@ -1,5 +1,6 @@
-import React, { useEffect, useState, memo } from 'react';
 import classNames from 'classnames';
+import React, { useEffect, useState, memo } from 'react';
+
 import styles from './Container.module.css';
 import type { ContainerProps } from './Container.types';
 

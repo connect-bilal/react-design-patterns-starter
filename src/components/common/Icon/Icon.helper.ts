@@ -1,9 +1,9 @@
 // getIconComponent.ts
-import * as FaIcons from 'react-icons/fa';
-import * as MdIcons from 'react-icons/md';
 import * as AiIcons from 'react-icons/ai';
 import * as BiIcons from 'react-icons/bi';
+import * as FaIcons from 'react-icons/fa';
 import * as HiIcons from 'react-icons/hi';
+import * as MdIcons from 'react-icons/md';
 
 const allIcons = {
   ...FaIcons,

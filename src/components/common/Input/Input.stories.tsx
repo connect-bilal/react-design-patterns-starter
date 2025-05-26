@@ -1,10 +1,11 @@
-import React, { useState, useCallback } from 'react';
-import Input from './Input';
-import { inputDefaultProps } from './Input.types';
-import { getValidationRules, validateInput } from './Input.helper';
-import { InputTypes } from './Input.types';
-import { FiSearch } from 'react-icons/fi';
 import type { Meta, StoryObj } from '@storybook/react';
+import React, { useState, useCallback } from 'react';
+import { FiSearch } from 'react-icons/fi';
+
+import Input from './Input';
+import { getValidationRules, validateInput } from './Input.helper';
+import { inputDefaultProps } from './Input.types';
+import { InputTypes } from './Input.types';
 import type { InputProps } from './Input.types';
 
 const meta: Meta<typeof Input> = {

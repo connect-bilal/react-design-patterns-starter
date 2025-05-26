@@ -1,5 +1,6 @@
-import { memo } from 'react';
 import classNames from 'classnames';
+import { memo } from 'react';
+
 import styles from './Label.module.css';
 import { labelDefaultProps } from './Label.types';
 import type { LabelProps } from './Label.types';

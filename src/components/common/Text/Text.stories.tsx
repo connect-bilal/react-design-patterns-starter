@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+
 import Text from './Text';
 import type { TextProps } from './Text.types';
 import { textTags } from './Text.types';

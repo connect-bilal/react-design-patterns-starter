@@ -1,7 +1,9 @@
+import clsx from 'clsx';
 import { forwardRef, memo } from 'react';
 import { FaSpinner } from 'react-icons/fa';
-import clsx from 'clsx';
+
 import Icon from '../Icon';
+
 import type { ButtonProps } from './Button.types';
 import { buttonDefaultProps } from './Button.types';
 import * as styles from './style';

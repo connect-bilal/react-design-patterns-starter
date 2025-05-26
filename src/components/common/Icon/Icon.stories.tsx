@@ -1,8 +1,8 @@
-// Icon.stories.tsx
 import type { Meta, StoryObj } from '@storybook/react';
+import { FaSave, FaTrash, FaDownload, FaBeer } from 'react-icons/fa';
+
 import Icon from './Icon';
 import { iconDefaultProps, iconVariants, iconSizes } from './Icon.types';
-import { FaSave, FaTrash, FaDownload, FaBeer } from 'react-icons/fa';
 
 const iconOptions = {
   Save: FaSave,

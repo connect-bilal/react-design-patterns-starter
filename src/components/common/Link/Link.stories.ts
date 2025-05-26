@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+
 import Link from './Link';
 import { linkDefaultProps, linkVariants, linkSizes, targetOptions } from './Link.types';
 import type { LinkProps } from './Link.types';

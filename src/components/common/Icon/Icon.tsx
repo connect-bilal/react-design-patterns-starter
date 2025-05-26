@@ -1,6 +1,7 @@
 import { forwardRef, memo } from 'react';
-import styles from './icon.module.css';
+
 import { getIconComponent } from './Icon.helper';
+import styles from './icon.module.css';
 import { iconDefaultProps } from './Icon.types';
 import type { IconProps } from './Icon.types';
 

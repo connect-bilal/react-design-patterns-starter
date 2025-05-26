@@ -1,9 +1,11 @@
-import { useState, forwardRef } from 'react';
 import classnames from 'classnames';
+import { useState, forwardRef } from 'react';
+
 import Label from '../Label';
+
+import styles from './Toggle.module.css';
 import { toggleDefaultProps } from './Toggle.types';
 import type { ToggleProps } from './Toggle.types';
-import styles from './Toggle.module.css';
 
 const Toggle = forwardRef<HTMLInputElement, ToggleProps>(
   (
