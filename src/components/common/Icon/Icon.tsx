@@ -28,7 +28,9 @@ const Icon = forwardRef<SVGSVGElement, IconProps>(
       typeof icon === 'string' ? getIconComponent(icon) : icon
     ) as React.ElementType;
 
-    if (!IconComponent) return null;
+    if (!IconComponent) {
+      return null;
+    }
     const isHidden = ariaHidden ?? !ariaLabel;
 
     return (

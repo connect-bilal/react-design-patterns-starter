@@ -5,10 +5,10 @@ import HomePage from './pages/HomePage';
 
 export default function App() {
   return (
-    <div className="main">
+    <div className='main'>
       <Container>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path='/' element={<HomePage />} />
         </Routes>
       </Container>
     </div>

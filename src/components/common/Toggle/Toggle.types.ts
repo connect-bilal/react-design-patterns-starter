@@ -13,10 +13,10 @@ export interface ToggleProps
 }
 
 export const toggleDefaultProps = {
-  checked: false,
-  disabled: false,
-  variant: 'switch',
-  labelPosition: 'right',
+  'checked': false,
+  'disabled': false,
+  'variant': 'switch',
+  'labelPosition': 'right',
   'aria-label': '',
 } satisfies Required<
   Pick<ToggleProps, 'checked' | 'disabled' | 'variant' | 'aria-label' | 'labelPosition'>

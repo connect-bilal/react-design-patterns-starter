@@ -79,7 +79,9 @@ const createInputStory = (argsOverrides: Partial<InputProps>): Story => {
     const handleChange = useCallback(
       (e: React.ChangeEvent<HTMLInputElement>) => {
         setValue(e.target.value);
-        if (error) setError(null);
+        if (error) {
+          setError(null);
+        }
       },
       [error],
     );

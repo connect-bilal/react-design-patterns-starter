@@ -39,9 +39,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
     return (
       <button ref={ref} className={btnClass} disabled={disabled} {...rest}>
-        {icon && !isLoading && <Icon icon={icon} size={iconSize} variant="button" />}
+        {icon && !isLoading && <Icon icon={icon} size={iconSize} variant='button' />}
         {isLoading && (
-          <Icon icon={FaSpinner} size={size} variant="button" className={styles.loadingIcon} />
+          <Icon icon={FaSpinner} size={size} variant='button' className={styles.loadingIcon} />
         )}{' '}
         {children}
       </button>

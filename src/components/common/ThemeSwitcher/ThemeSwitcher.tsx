@@ -11,12 +11,12 @@ const ThemeSwitcher = () => {
 
   return (
     <Toggle
-      id="theme-toggle"
+      id='theme-toggle'
       label={labelText}
       checked={isDark}
       onChange={() => toggleTheme()}
-      variant="switch"
-      aria-label="Toggle light and dark theme"
+      variant='switch'
+      aria-label='Toggle light and dark theme'
     />
   );
 };

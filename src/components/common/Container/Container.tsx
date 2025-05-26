@@ -12,7 +12,9 @@ const Container: React.FC<ContainerProps> = ({ children, className, onBreakpoint
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
-      if (onBreakpointChange) onBreakpointChange(window.innerWidth);
+      if (onBreakpointChange) {
+        return onBreakpointChange(window.innerWidth);
+      }
     };
 
     window.addEventListener('resize', handleResize);
@@ -26,10 +28,18 @@ const Container: React.FC<ContainerProps> = ({ children, className, onBreakpoint
   // You can add logic here to conditionally adjust maxWidth or class based on windowWidth
   // Example: If windowWidth < 600, force maxWidth to 'sm'
   const responsiveMaxWidth = (() => {
-    if (windowWidth < 640) return 'sm';
-    if (windowWidth < 768) return 'md';
-    if (windowWidth < 1024) return 'lg';
-    if (windowWidth < 1280) return 'xl';
+    if (windowWidth < 640) {
+      return 'sm';
+    }
+    if (windowWidth < 768) {
+      return 'md';
+    }
+    if (windowWidth < 1024) {
+      return 'lg';
+    }
+    if (windowWidth < 1280) {
+      return 'xl';
+    }
     return 'xxl';
   })();
 

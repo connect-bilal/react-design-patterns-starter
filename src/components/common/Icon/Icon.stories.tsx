@@ -25,7 +25,7 @@ const meta: Meta<typeof Icon> = {
     },
   },
   argTypes: {
-    icon: {
+    'icon': {
       description: 'Icon component to render (from react-icons).',
       control: {
         type: 'select',
@@ -42,7 +42,7 @@ const meta: Meta<typeof Icon> = {
         type: { summary: 'React.ComponentType<IconBaseProps>' },
       },
     },
-    size: {
+    'size': {
       description: 'Size of the icon.',
       control: 'radio',
       options: iconSizes,
@@ -51,7 +51,7 @@ const meta: Meta<typeof Icon> = {
         defaultValue: { summary: iconDefaultProps.size },
       },
     },
-    variant: {
+    'variant': {
       description: 'Visual variant to apply color styles.',
       control: 'radio',
       options: iconVariants,
@@ -60,21 +60,21 @@ const meta: Meta<typeof Icon> = {
         defaultValue: { summary: iconDefaultProps.variant },
       },
     },
-    className: {
+    'className': {
       description: 'Additional CSS class for custom styling.',
       control: 'text',
       table: {
         type: { summary: 'string' },
       },
     },
-    style: {
+    'style': {
       description: 'Inline styles to apply to the icon.',
       control: 'object',
       table: {
         type: { summary: 'React.CSSProperties' },
       },
     },
-    title: {
+    'title': {
       description: 'Title attribute for accessibility and tooltips.',
       control: 'text',
       table: {
@@ -121,8 +121,8 @@ export const Default = createStory(
 );
 export const AccessibleBeer = createStory(
   {
-    icon: FaBeer,
-    title: 'Beer Icon',
+    'icon': FaBeer,
+    'title': 'Beer Icon',
     'aria-label': 'Beer Icon',
   },
   'Accessible Beer Icon',

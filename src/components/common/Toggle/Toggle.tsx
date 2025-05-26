@@ -30,8 +30,12 @@ const Toggle = forwardRef<HTMLInputElement, ToggleProps>(
     const isChecked = isControlled ? checked : internalChecked;
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      if (disabled) return;
-      if (!isControlled) setInternalChecked(e.target.checked);
+      if (disabled) {
+        return;
+      }
+      if (!isControlled) {
+        setInternalChecked(e.target.checked);
+      }
       onChange?.(e.target.checked, e);
     };
 
@@ -43,12 +47,12 @@ const Toggle = forwardRef<HTMLInputElement, ToggleProps>(
       variant === 'checkbox' ? (
         <span
           className={classnames(styles.checkbox, { [styles.checkboxChecked]: isChecked })}
-          aria-hidden="true"
+          aria-hidden='true'
         />
       ) : (
         <span
           className={classnames(styles.switch, { [styles.switchChecked]: isChecked })}
-          aria-hidden="true"
+          aria-hidden='true'
         >
           <span
             className={classnames(styles.switchThumb, { [styles.switchCheckedThumb]: isChecked })}
@@ -64,7 +68,7 @@ const Toggle = forwardRef<HTMLInputElement, ToggleProps>(
       >
         {label && labelPosition === 'left' && (
           <Label
-            size="md"
+            size='md'
             className={classnames(styles.labelText, styles.labelLeft)}
             required={false}
           >
@@ -73,7 +77,7 @@ const Toggle = forwardRef<HTMLInputElement, ToggleProps>(
         )}
         <input
           id={inputId}
-          type="checkbox"
+          type='checkbox'
           checked={isChecked}
           defaultChecked={defaultChecked}
           onChange={handleChange}
@@ -85,7 +89,7 @@ const Toggle = forwardRef<HTMLInputElement, ToggleProps>(
         />
         {renderVisual}
         {label && labelPosition === 'right' && (
-          <Label size="md" className={styles.labelText} required={false}>
+          <Label size='md' className={styles.labelText} required={false}>
             {label}
           </Label>
         )}

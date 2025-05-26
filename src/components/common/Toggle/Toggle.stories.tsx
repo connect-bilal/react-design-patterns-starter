@@ -121,6 +121,6 @@ export const DisabledToggle = createStory({
 });
 
 export const WithoutLabel = createStory({
-  label: undefined,
+  'label': undefined,
   'aria-label': 'Toggle without visible label',
 });

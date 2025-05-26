@@ -13,6 +13,7 @@ export default tseslint.config(
       'src/spec/**',
       '**/*.spec.ts',
       '**/*.spec.tsx',
+      'node_modules',
     ],
   },
   {
@@ -25,7 +26,7 @@ export default tseslint.config(
     plugins: {
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
-      import: importPlugin,
+      'import': importPlugin,
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
@@ -33,8 +34,8 @@ export default tseslint.config(
       'import/order': [
         'error',
         {
-          groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object'],
-          pathGroups: [
+          'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object'],
+          'pathGroups': [
             {
               pattern: 'react',
               group: 'external',
@@ -46,12 +47,21 @@ export default tseslint.config(
             },
           ],
           'newlines-between': 'always',
-          alphabetize: {
+          'alphabetize': {
             order: 'asc',
             caseInsensitive: true,
           },
         },
       ],
+      'curly': 'error',
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'no-else-return': 'error',
+      'no-multi-assign': 'error',
+      'no-nested-ternary': 'error',
+      'no-param-reassign': 'error',
+      'no-unneeded-ternary': 'error',
+      'prefer-template': 'error',
+      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     },
   },
 );
