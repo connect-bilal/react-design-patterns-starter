@@ -25,10 +25,10 @@ export default {
         container: 'rgb(var(--color-bg-container) / <alpha-value>)',
       },
       fontSize: {
-        sm: 'var(--font-size-sm)',
-        md: 'var(--font-size-md)',
-        lg: 'var(--font-size-lg)',
-        xl: 'var(--font-size-xl)',
+        'sm': 'var(--font-size-sm)',
+        'md': 'var(--font-size-md)',
+        'lg': 'var(--font-size-lg)',
+        'xl': 'var(--font-size-xl)',
         '2xl': 'var(--font-size-2xl)',
       },
       fontWeight: {

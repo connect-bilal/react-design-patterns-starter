@@ -1,49 +1,28 @@
-import classNames from 'classnames';
-import React, { useEffect, useState, memo } from 'react';
+import clsx from 'clsx';
+import React, { memo, useMemo } from 'react';
 
-import styles from './Container.module.css';
-import type { ContainerProps } from './Container.types';
+import { useWindowWidth } from '../../../hooks/useWindowWidth';
+
+import { getBreakpointLabel } from './Container.helper';
+import * as styles from './Container.styles';
+import type { ContainerProps, MaxWidthLabel } from './Container.types';
 
 const Container: React.FC<ContainerProps> = ({ children, className, onBreakpointChange }) => {
-  const [windowWidth, setWindowWidth] = useState<number>(
-    typeof window !== 'undefined' ? window.innerWidth : 0,
-  );
+  const windowWidth = useWindowWidth(onBreakpointChange);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-      if (onBreakpointChange) {
-        return onBreakpointChange(window.innerWidth);
-      }
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    // call once on mount
-    handleResize();
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, [onBreakpointChange]);
-
-  // You can add logic here to conditionally adjust maxWidth or class based on windowWidth
-  // Example: If windowWidth < 600, force maxWidth to 'sm'
-  const responsiveMaxWidth = (() => {
-    if (windowWidth < 640) {
+  // Determine the responsive max width label based on current window width
+  const responsiveMaxWidth = useMemo<MaxWidthLabel>(() => {
+    if (windowWidth === 0) {
       return 'sm';
     }
-    if (windowWidth < 768) {
-      return 'md';
-    }
-    if (windowWidth < 1024) {
-      return 'lg';
-    }
-    if (windowWidth < 1280) {
-      return 'xl';
-    }
-    return 'xxl';
-  })();
+    return getBreakpointLabel(windowWidth);
+  }, [windowWidth]);
 
-  const containerClass = classNames(styles.container, styles[responsiveMaxWidth], className);
+  const containerClass = clsx(
+    styles.base,
+    styles.maxWidths[responsiveMaxWidth as keyof typeof styles.maxWidths],
+    className,
+  );
 
   return <div className={containerClass}>{children}</div>;
 };

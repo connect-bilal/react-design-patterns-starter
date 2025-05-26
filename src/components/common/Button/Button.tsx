@@ -4,9 +4,9 @@ import { FaSpinner } from 'react-icons/fa';
 
 import Icon from '../Icon';
 
-import type { ButtonProps } from './Button.types';
+import * as styles from './Button.styles';
 import { buttonDefaultProps } from './Button.types';
-import * as styles from './style';
+import type { ButtonProps } from './Button.types';
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
