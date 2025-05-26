@@ -1,10 +1,10 @@
 import { forwardRef, memo } from 'react';
-import classNames from 'classnames';
+import { FaSpinner } from 'react-icons/fa';
+import clsx from 'clsx';
 import Icon from '../Icon';
 import type { ButtonProps } from './Button.types';
 import { buttonDefaultProps } from './Button.types';
-import { FaSpinner } from 'react-icons/fa';
-import styles from './Button.module.css';
+import * as styles from './style';
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
@@ -23,12 +23,15 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref,
   ) => {
-    const btnClass = classNames(
-      styles.button,
-      styles[variant],
-      styles[size],
-      styles[`icon-${iconPosition}`],
-      { [styles.fullWidth]: fullWidth },
+    const btnClass = clsx(
+      styles.base,
+      styles.variants[variant],
+      styles.sizes[size],
+      styles.iconPositions[iconPosition],
+      {
+        [styles.fullWidth]: fullWidth,
+        [styles.disabled]: disabled,
+      },
       className,
     );
 
@@ -36,7 +39,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       <button ref={ref} className={btnClass} disabled={disabled} {...rest}>
         {icon && !isLoading && <Icon icon={icon} size={iconSize} variant="button" />}
         {isLoading && (
-          <Icon icon={FaSpinner} size={size} variant={variant} className={styles.loadingIcon} />
+          <Icon icon={FaSpinner} size={size} variant="button" className={styles.loadingIcon} />
         )}{' '}
         {children}
       </button>
