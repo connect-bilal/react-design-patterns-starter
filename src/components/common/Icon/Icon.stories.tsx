@@ -115,10 +115,7 @@ const createStory = (
 });
 
 // Stories
-export const Default = createStory(
-  { icon: FaSave, title: 'Save Icon', variant: 'primary' },
-  'Save Icon',
-);
+export const Default = createStory({ icon: FaSave, variant: 'primary' }, 'Save Icon');
 export const AccessibleBeer = createStory(
   {
     'icon': FaBeer,

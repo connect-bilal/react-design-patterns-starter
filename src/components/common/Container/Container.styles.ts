@@ -1,9 +1,9 @@
-export const base = 'w-full mx-auto px-4 box-border bg-container';
+export const base = 'box-border bg-container mx-auto';
 
 export const maxWidths = {
   sm: 'max-w-sm',
   md: 'max-w-md',
   lg: 'max-w-lg',
   xl: 'max-w-xl',
-  xxl: 'max-w-7xl',
+  xxl: 'max-w-2xl',
 };

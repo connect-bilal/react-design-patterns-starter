@@ -1,0 +1,89 @@
+@theme {
+  /* Font Families */
+  --font-family-base: 'Inter', sans-serif;
+  --font-family-heading: 'Poppins', sans-serif;
+
+  /* Breakpoints */
+  --max-width-sm: 640px;
+  --max-width-md: 768px;
+  --max-width-lg: 1024px;
+  --max-width-xl: 1280px;
+  --max-width-2xl: 2500px;
+
+  /*
+    Color Variables Reference
+
+    --color-primary: Main brand color for primary actions and highlights.
+    --color-secondary: Used for secondary actions, backgrounds, or accents.
+    --color-success: Used for success states, confirmations, and positive feedback.
+    --color-danger: Indicates errors, destructive actions, or warnings.
+    --color-warning: Highlights cautionary actions or important alerts.
+    --color-info: For informational messages and secondary highlights.
+    --color-muted: For subdued text, placeholders, or disabled elements.
+    --color-white: Standard white, used for backgrounds or text contrast.
+
+    Update the hex values below to customize your theme colors.
+  */
+  --color-primary: #007bff;
+  --color-secondary: #555555;
+  --color-success: #28a745;
+  --color-danger: #dc3545;
+  --color-warning: #ffc107;
+  --color-info: #17a2b8;
+  --color-muted: #6c757d;
+  --color-white: #ffffff;
+
+  /* Text colors for content on colored backgrounds */
+  --color-on-primary: var(--color-white);
+  --color-on-success: var(--color-white);
+  --color-on-danger: var(--color-white);
+  --color-on-warning: #212529;
+  --color-on-info: var(--color-white);
+
+  /* Text Colors */
+  --color-base: #1a1a1a;
+
+  /* Background colors */
+  --color-body: #f8f9fa;
+  --color-surface: var(--color-white);
+  --color-container: azure;
+
+  /* Font Sizes */
+  --font-size-xs: 0.6rem;
+  --font-size-sm: 0.75rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Line heights */
+  --line-height-base: 1.5;
+  --letter-spacing-base: normal;
+
+  /* Icon sizes */
+  --icon-size-xs: 12px;
+  --icon-size-sm: 16px;
+  --icon-size-md: 24px;
+  --icon-size-lg: 32px;
+
+  /* Border radius */
+  --radius-none: 0;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Transitions */
+  --transition-base-duration: 0.3s;
+  --transition-base-easing: ease;
+  --transition-standard:
+    opacity var(--transition-base-duration) var(--transition-base-easing),
+    background-color var(--transition-base-duration) var(--transition-base-easing);
+
+  /* Borders & Shadows */
+  --shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}

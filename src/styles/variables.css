@@ -1,6 +1,8 @@
 /* =====================================================
    🌞 Light Mode (Default)
    ===================================================== */
+/* Would be removed after migration to Tailwind CSS */
+
 :root {
   /* Font Families */
   --font-family-base: 'Inter', sans-serif;

@@ -1,6 +1,7 @@
 import type { Preview } from '@storybook/react';
-import '../src/styles/variables.css';
-import '../src/styles/index.css';
+
+import { ThemeSwitcher } from '../src/components';
+import '../src/styles/global.css';
 
 const preview: Preview = {
   parameters: {
@@ -12,22 +13,27 @@ const preview: Preview = {
     },
   },
   decorators: [
-    Story => (
-      <div
-        style={{
-          width: '100vw',
-          height: 'auto',
-          margin: 0,
-          padding: 0,
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          boxSizing: 'border-box',
-        }}
-      >
-        <Story />
-      </div>
-    ),
+    (Story, context) => {
+      // Only apply to canvas (story iframes)
+      if (context.viewMode === 'story') {
+        return (
+          <div className='fixed inset-0 flex flex-col items-center justify-center bg-white p-4 dark:bg-gray-400'>
+            <div className='absolute top-4 right-4'>
+              <ThemeSwitcher />
+            </div>
+            <div className='flex w-full max-w-4xl justify-center'>
+              <Story />
+            </div>
+          </div>
+        );
+      }
+      // For docs pages
+      return (
+        <div>
+          <Story />
+        </div>
+      );
+    },
   ],
 };
 

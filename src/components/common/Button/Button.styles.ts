@@ -1,5 +1,5 @@
 export const base =
-  'inline-flex items-center justify-center gap-2 rounded-md border-none shadow-md transition cursor-pointer';
+  'inline-flex items-center justify-center gap-2 rounded-md border-0 shadow-md transition-standard cursor-pointer';
 
 export const sizes = {
   sm: 'text-sm px-2 py-1',
@@ -9,14 +9,14 @@ export const sizes = {
 
 export const variants = {
   primary:
-    'bg-blue-600 text-white hover:opacity-75 focus:opacity-75 active:scale-95 active:opacity-85',
+    'bg-primary text-on-primary hover:opacity-hover focus:opacity-hover active:scale-95 active:opacity-active',
   success:
-    'bg-green-600 text-white hover:opacity-75 focus:opacity-75 active:scale-95 active:opacity-85',
+    'bg-success text-on-success hover:opacity-hover focus:opacity-hover active:scale-95 active:opacity-active',
   danger:
-    'bg-red-600 text-white hover:opacity-75 focus:opacity-75 active:scale-95 active:opacity-85',
+    'bg-danger text-on-danger hover:opacity-hover focus:opacity-hover active:scale-95 active:opacity-active',
   warning:
-    'bg-yellow-500 text-black hover:opacity-75 focus:opacity-75 active:scale-95 active:opacity-85',
-  info: 'bg-teal-600 text-white hover:opacity-75 focus:opacity-75 active:scale-95 active:opacity-85',
+    'bg-warning text-on-warning hover:opacity-hover focus:opacity-hover active:scale-95 active:opacity-active',
+  info: 'bg-info text-on-info hover:opacity-hover focus:opacity-hover active:scale-95 active:opacity-active',
 };
 
 export const fullWidth = 'w-full justify-center';
@@ -28,6 +28,5 @@ export const iconPositions = {
   bottom: 'flex-col-reverse',
 };
 
-export const disabled = 'cursor-not-allowed opacity-60 pointer-events-none';
-
+export const disabled = 'cursor-not-allowed opacity-disabled pointer-events-none';
 export const loadingIcon = 'animate-spin inline-block align-middle text-current';

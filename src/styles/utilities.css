@@ -1,0 +1,40 @@
+@layer utilities {
+  /* Utility Classes icons */
+  .w-icon-xs {
+    width: var(--icon-size-xs);
+  }
+  .h-icon-xs {
+    height: var(--icon-size-xs);
+  }
+
+  .w-icon-sm {
+    width: var(--icon-size-sm);
+  }
+  .h-icon-sm {
+    height: var(--icon-size-sm);
+  }
+
+  .w-icon-md {
+    width: var(--icon-size-md);
+  }
+  .h-icon-md {
+    height: var(--icon-size-md);
+  }
+
+  .w-icon-lg {
+    width: var(--icon-size-lg);
+  }
+  .h-icon-lg {
+    height: var(--icon-size-lg);
+  }
+
+  [data-theme='dark'] {
+    /* Text Color */
+    --color-base: #f0f0f0;
+
+    /* Theme Colors */
+    --color-primary: #66b2ff;
+    --color-secondary: #555555;
+    --color-container: rgb(43, 54, 54);
+  }
+}

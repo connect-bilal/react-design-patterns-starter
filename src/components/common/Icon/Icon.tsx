@@ -1,7 +1,8 @@
+import clsx from 'clsx';
 import { forwardRef, memo } from 'react';
 
 import { getIconComponent } from './Icon.helper';
-import styles from './icon.module.css';
+import * as styles from './Icon.styles';
 import { iconDefaultProps } from './Icon.types';
 import type { IconProps } from './Icon.types';
 
@@ -20,29 +21,28 @@ const Icon = forwardRef<SVGSVGElement, IconProps>(
     },
     ref,
   ) => {
-    const classNames = [styles.icon, styles[`icon-${variant}`], styles[`icon-${size}`], className]
-      .filter(Boolean)
-      .join(' ');
-
     const IconComponent = (
       typeof icon === 'string' ? getIconComponent(icon) : icon
     ) as React.ElementType;
-
     if (!IconComponent) {
       return null;
     }
+
     const isHidden = ariaHidden ?? !ariaLabel;
+    const variantClass = styles.iconVariantClasses[variant];
+    const sizeClass = styles.iconSizeClasses[size];
+    const iconClasses = clsx(styles.iconBaseClasses, variantClass, sizeClass, className);
 
     return (
       <IconComponent
-        className={classNames}
+        className={iconClasses}
         style={style}
         aria-label={ariaLabel}
         aria-hidden={isHidden}
         title={title}
         ref={ref}
         {...rest}
-      ></IconComponent>
+      />
     );
   },
 );
