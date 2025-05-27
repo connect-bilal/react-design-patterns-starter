@@ -9,8 +9,8 @@ const Text = forwardRef<HTMLElement, TextProps>(
   (
     {
       as: Component = textDefaultProps.as,
-      color = 'var(--color-text-primary)',
       textAlign = 'left',
+      color,
       className,
       children,
       style,

@@ -11,13 +11,19 @@ A minimal and scalable React starter template focused on best practices and mode
 - **React Hooks** and **Context API** support
 - Modular and scalable **folder structure**
 - Reusable UI components: Button, Text, Container, etc.
-- Scoped styling with **CSS Modules**
+- Utility-first styling with **Tailwind CSS**
 - **Storybook** integration for isolated UI development
 - Code quality tools: **ESLint** and **Prettier**
 - Performance optimizations using **React.memo** and **forwardRef**
 - Easily extendable for routing, state management, and API integration
 
 ---
+
+## Tailwind CSS
+
+- Fully integrated with Tailwind CSS for utility-first styling
+- Supports custom theming via CSS variables for colors, fonts, and spacing
+- Enables fast, consistent styling while maintaining a scalable, maintainable design system
 
 ### Prerequisites
 
@@ -39,7 +45,6 @@ yarn install
 - 🔧 Update global styles and themes in `src/styles/`
 - 🎨 Modify or extend atomic components in `src/common/`
 - 🧱 Create new features using the pre-defined folder structure and design patterns
-- 💄 Adjust CSS modules or add your preferred styling solution
 - 📖 Check the [Storybook documentation](https://storybook-react-design-patterns.vercel.app) to explore available components and see usage examples for each one
 
 ## 📦 Included Dependencies

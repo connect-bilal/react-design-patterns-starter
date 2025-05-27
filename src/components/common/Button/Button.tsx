@@ -3,6 +3,7 @@ import { forwardRef, memo } from 'react';
 import { FaSpinner } from 'react-icons/fa';
 
 import Icon from '../Icon';
+import Text from '../Text'; 
 
 import * as styles from './Button.styles';
 import { buttonDefaultProps } from './Button.types';
@@ -43,7 +44,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {isLoading && (
           <Icon icon={FaSpinner} size={size} variant='button' className={styles.loadingIcon} />
         )}{' '}
-        {children}
+        <Text className={clsx(`text-on-${variant}`)}>{children}</Text>
       </button>
     );
   },
