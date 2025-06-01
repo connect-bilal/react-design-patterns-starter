@@ -26,10 +26,12 @@ export type InputProps = {
   label?: string;
   error?: string;
   required?: boolean;
+  resettable?: boolean;
   className?: string;
   iconStart?: React.ElementType;
   iconEnd?: React.ElementType;
   iconPosition?: 'left' | 'right';
+  value?: string | number;
 
   min?: number | string;
   max?: number | string;
@@ -39,6 +41,7 @@ export type InputProps = {
 export const inputDefaultProps = {
   type: 'text',
   required: false,
+  resettable: false,
 } as const;
 
 export function isValidInputType(type: string): type is InputType {

@@ -13,6 +13,9 @@ export interface IconProps {
   'title'?: string;
   'aria-label'?: string;
   'aria-hidden'?: boolean;
+  'onClick'?: () => void;
+  'onKeyDown'?: (e: React.KeyboardEvent) => void;
+  'onMouseDown'?: (e: React.MouseEvent) => void;
 }
 
 export const iconDefaultProps = {

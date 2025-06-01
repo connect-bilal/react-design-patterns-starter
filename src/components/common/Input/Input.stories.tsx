@@ -160,3 +160,10 @@ export const WithIcon = createInputStory({
   iconStart: FiSearch,
   iconPosition: 'left',
 });
+
+export const WithReset = createInputStory({
+  type: 'text',
+  label: 'Search Input',
+  resettable: true
+});
+

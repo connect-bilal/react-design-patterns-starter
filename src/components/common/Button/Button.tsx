@@ -3,7 +3,7 @@ import { forwardRef, memo } from 'react';
 import { FaSpinner } from 'react-icons/fa';
 
 import Icon from '../Icon';
-import Text from '../Text'; 
+import Text from '../Text';
 
 import * as styles from './Button.styles';
 import { buttonDefaultProps } from './Button.types';

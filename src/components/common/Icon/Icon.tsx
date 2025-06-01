@@ -1,6 +1,8 @@
 import clsx from 'clsx';
 import { forwardRef, memo } from 'react';
 
+import { mergeRefs } from '../../../utils';
+
 import { getIconComponent } from './Icon.helper';
 import * as styles from './Icon.styles';
 import { iconDefaultProps } from './Icon.types';
@@ -15,6 +17,9 @@ const Icon = forwardRef<SVGSVGElement, IconProps>(
       icon,
       style,
       title,
+      onClick,
+      onKeyDown,
+      onMouseDown,
       'aria-label': ariaLabel,
       'aria-hidden': ariaHidden = !ariaLabel,
       ...rest
@@ -40,7 +45,10 @@ const Icon = forwardRef<SVGSVGElement, IconProps>(
         aria-label={ariaLabel}
         aria-hidden={isHidden}
         title={title}
-        ref={ref}
+        onClick={onClick}
+        onKeyDown={onKeyDown}
+        onMouseDown={onMouseDown}
+        ref={mergeRefs([ref])}
         {...rest}
       />
     );

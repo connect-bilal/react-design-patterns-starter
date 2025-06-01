@@ -32,6 +32,7 @@
   --color-info: #17a2b8;
   --color-muted: #6c757d;
   --color-white: #ffffff;
+  --color-transparent: transparent;
 
   /* Text colors for content on colored backgrounds */
   --color-on-primary: var(--color-white);
