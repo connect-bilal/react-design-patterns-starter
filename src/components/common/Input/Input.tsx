@@ -57,7 +57,9 @@ const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
   // Memoized HTML validation rules (e.g., pattern, min, max)
   const normalizedValidationRules = useMemo(() => {
     const rules = getValidationRules(inputType);
-    if (!rules) {return {}};
+    if (!rules) {
+      return {};
+    }
     const pattern = typeof rules.pattern === 'string' ? rules.pattern : rules.pattern?.source;
     return pattern ? { ...rules, pattern } : rules;
   }, [inputType]);
@@ -83,7 +85,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
   // Computed flags
   const showIcon = allowIcons(inputType) && (iconStart || iconEnd);
   const shouldShowReset = resettable && !!inputValue && isFocused;
-  const showError = touched && !!inputRef.current?.value.trim() || !!error;
+  const showError = (touched && !!inputRef.current?.value.trim()) || !!error;
   let iconPaddingClass = '';
 
   if (iconPosition === 'left') {

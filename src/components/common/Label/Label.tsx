@@ -1,7 +1,7 @@
-import classNames from 'classnames';
+import clsx from 'clsx';
 import { memo } from 'react';
 
-import styles from './Label.module.css';
+import { labelBase, labelSizes, labelStates, requiredClass } from './Label.styles';
 import { labelDefaultProps } from './Label.types';
 import type { LabelProps } from './Label.types';
 
@@ -14,14 +14,17 @@ const Label = ({
   className = labelDefaultProps.className,
   ...rest
 }: LabelProps) => {
+  const sizeClass = labelSizes[size] || labelSizes.md;
+  const stateClass = labelStates[state] || labelStates.default;
+
   return (
     <label
       htmlFor={htmlFor}
-      className={classNames(styles.label, styles[size], styles[state], className)}
+      className={clsx(labelBase, sizeClass, stateClass, className)}
       {...rest}
     >
       {children}
-      {required && <span className={styles.required}>*</span>}
+      {required && <span className={requiredClass}>*</span>}
     </label>
   );
 };

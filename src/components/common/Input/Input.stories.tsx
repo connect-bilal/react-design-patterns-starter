@@ -164,6 +164,5 @@ export const WithIcon = createInputStory({
 export const WithReset = createInputStory({
   type: 'text',
   label: 'Search Input',
-  resettable: true
+  resettable: true,
 });
-

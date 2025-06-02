@@ -15,7 +15,9 @@ export const isValidLiteral = <T extends readonly string[]>(
 export function mergeRefs<T>(refs: Array<Ref<T> | undefined>): Ref<T> {
   return value => {
     refs.forEach(ref => {
-      if (!ref) {return};
+      if (!ref) {
+        return;
+      }
       if (typeof ref === 'function') {
         ref(value);
       } else if (typeof ref === 'object' && 'current' in ref) {
