@@ -33,7 +33,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       styles.iconPositions[iconPosition],
       {
         [styles.fullWidth]: fullWidth,
-        [styles.disabled]: disabled,
+        [styles.disabled]: disabled || isLoading,
       },
       className,
     );

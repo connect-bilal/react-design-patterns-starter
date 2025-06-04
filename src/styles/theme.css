@@ -24,7 +24,7 @@
 
     Update the hex values below to customize your theme colors.
   */
-  --color-primary: #007bff;
+  --color-primary: #ff0000;
   --color-secondary: #555555;
   --color-success: #28a745;
   --color-danger: #dc3545;
@@ -78,6 +78,11 @@
   --radius-md: 8px;
   --radius-lg: 12px;
 
+  /* Opacity values */
+  --opacity-disabled: 0.5;
+  --opacity-hover: 0.8;
+  --opacity-active: 0.95;
+
   /* Transitions */
   --transition-base-duration: 0.3s;
   --transition-base-easing: ease;
@@ -87,4 +92,14 @@
 
   /* Borders & Shadows */
   --shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  
 }
+   :root[data-theme='dark'] & {
+    /* Text Color */
+    --color-base: #f0f0f0;
+
+    /* Theme Colors */
+    --color-primary: #ff0000;
+    --color-secondary: #555555;
+    --color-container: rgb(43, 54, 54);
+  }

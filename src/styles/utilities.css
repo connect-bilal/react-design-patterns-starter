@@ -27,14 +27,4 @@
   .h-icon-lg {
     height: var(--icon-size-lg);
   }
-
-  [data-theme='dark'] {
-    /* Text Color */
-    --color-base: #f0f0f0;
-
-    /* Theme Colors */
-    --color-primary: #66b2ff;
-    --color-secondary: #555555;
-    --color-container: rgb(43, 54, 54);
-  }
 }

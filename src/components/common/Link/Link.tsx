@@ -1,7 +1,7 @@
-import classNames from 'classnames';
+import clsx from 'clsx';
 import { memo } from 'react';
 
-import styles from './Link.module.css';
+import { linkBase, linkVariants, linkSizes, linkDisabled, linkHover } from './Link.styles';
 import { linkDefaultProps } from './Link.types';
 import type { LinkProps } from './Link.types';
 
@@ -30,11 +30,12 @@ const Link = ({
     onClick?.(e);
   };
 
-  const classes = classNames(
-    styles.link,
-    styles[`link_${variant}`],
-    styles[`link_${size}`],
-    disabled && styles.link_disabled,
+  const classes = clsx(
+    linkBase,
+    linkVariants[variant],
+    linkSizes[size],
+    disabled && linkDisabled,
+    disabled && linkHover,
     className,
   );
 

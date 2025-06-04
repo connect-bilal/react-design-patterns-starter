@@ -12,6 +12,7 @@ export const inputContainer = `
   transition-all duration-300 ease-base
   focus-within:border-primary
   focus-within:shadow-[0_0_0_2px_rgba(0,123,255,0.2)]
+  bg-transparent
 `;
 
 export const input = `
