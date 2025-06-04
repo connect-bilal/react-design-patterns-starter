@@ -1,4 +1,5 @@
 @theme {
+
   /* Font Families */
   --font-family-base: 'Inter', sans-serif;
   --font-family-heading: 'Poppins', sans-serif;
@@ -24,7 +25,7 @@
 
     Update the hex values below to customize your theme colors.
   */
-  --color-primary: #ff0000;
+  --color-primary: #007bff;
   --color-secondary: #555555;
   --color-success: #28a745;
   --color-danger: #dc3545;
@@ -99,7 +100,7 @@
     --color-base: #f0f0f0;
 
     /* Theme Colors */
-    --color-primary: #ff0000;
+    --color-primary: #77b0ed;
     --color-secondary: #555555;
     --color-container: rgb(43, 54, 54);
   }
