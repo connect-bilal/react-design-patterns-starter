@@ -1,5 +1,4 @@
 @theme {
-
   /* Font Families */
   --font-family-base: 'Inter', sans-serif;
   --font-family-heading: 'Poppins', sans-serif;
@@ -93,14 +92,13 @@
 
   /* Borders & Shadows */
   --shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  
 }
-   :root[data-theme='dark'] & {
-    /* Text Color */
-    --color-base: #f0f0f0;
+:root[data-theme='dark'] & {
+  /* Text Color */
+  --color-base: #f0f0f0;
 
-    /* Theme Colors */
-    --color-primary: #77b0ed;
-    --color-secondary: #555555;
-    --color-container: rgb(43, 54, 54);
-  }
+  /* Theme Colors */
+  --color-primary: #77b0ed;
+  --color-secondary: #555555;
+  --color-container: rgb(43, 54, 54);
+}
