@@ -18,9 +18,8 @@ const Text = forwardRef<HTMLElement, TextProps>(
     },
     ref,
   ) => {
-    const tagClass = typeof Component === 'string' && textVariants[Component]
-      ? textVariants[Component]
-      : '';
+    const tagClass =
+      typeof Component === 'string' && textVariants[Component] ? textVariants[Component] : '';
 
     return (
       <Component
