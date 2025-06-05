@@ -4,7 +4,6 @@ import Text from './Text';
 import type { TextProps } from './Text.types';
 import { textTags } from './Text.types';
 import { textDefaultProps } from './Text.types';
-import '../../../styles/variables.css';
 
 const meta: Meta<typeof Text> = {
   title: 'Components/Text',
