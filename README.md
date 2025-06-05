@@ -136,6 +136,11 @@ src/
 ├── components/          # Reusable UI components following Atomic Design principles
 │   ├── common/          # Base-level atomic components (Button, Text, Container)
 │   │   ├── Button/               # Button component
+|   │   │   ├── Button.tsx            # Main Button component
+│   │   │   ├── Button.types.ts       # Props types / interfaces
+│   │   │   ├── Button.styles.ts      # Tailwind style definitions
+│   │   │   ├── Button.stories.ts     # Storybook story
+│   │   │   ├── index.ts              # Re-export for cleaner imports
 │   │   ├── Container/            # Container/layout component
 │   │   ├── Label/                # Label component
 │   │   └── Text/                 # Text/typography component
@@ -144,19 +149,26 @@ src/
 │   │   └── Toggle/               # Toggle component for switch or checkbox functionality
 │   │   └── ThemeSwitcher/        # Wrapper component using Toggle & ThemeContext
 │   └── hoc/             # Higher-Order Components
-│       └── withLogging.tsx
-│       └── withAuth.tsx
+│   └──├── index.ts         # Central re-export 
 ├── constants/           # Application-wide constants, enums, and configuration values
 ├── context/                # Global app state with React context
 │   ├── ThemeContext.tsx    # Theme context (light/dark toggle)
-│   |── index.ts            # Barrel export (optional)
+│   |── index.ts            # Contexts export
 ├── hooks/               # Custom React hooks for shared logic across app
+├── i18n/                # Localization files and i18n config (e.g., en.json, fr.json)
+├── lib/                 # Library modules & integrations (API clients, services)
+│   |── index.ts         # Library export
 ├── pages/               # Route-level components (pages/screens)
 ├── services/            # API calls, business logic
 ├── store/               # State management (Redux, Zustand, or Context)
 ├── styles/              # Global styles, theme files, and CSS Modules
+│   ├── global.css       # Base styles, CSS resets, and global styling
+│   ├── theme.css        # Theme-related styles (e.g., light and dark mode overrides)
+│   ├── utilities.css    # Custom Tailwind utility classes and overrides for extended styling
+│   └── token.ts         # Design tokens and reusable style constants (colors, spacing, typography, state classes)
 ├── types/               # TypeScript type definitions and interfaces
 ├── utils/               # Utility functions and helpers (formatting, API calls, etc.)
+│   |── index.ts         # Utilities export
 ├── App.tsx              # Root application component
 └── index.tsx            # Application entry point, rendering <App />
 ```
@@ -166,6 +178,15 @@ src/
 Explore the live Storybook documentation to see the components in action, following the React Design Patterns used in this project:
 
 🔗 [View Storybook](https://storybook-react-design-patterns.vercel.app)
+
+## Frequently Asked Questions (FAQs)
+**Q: Can I remove components I don’t need?**  
+**A:** To remove unused components, simply delete their folder inside `src/components/common/` and remove their export from  
+`src/components/common/index.ts`.
+
+**Q: Can I use this starter for commercial projects?**  
+**A:** Absolutely! This starter is free to use and modify for personal or commercial projects. Just please don’t redistribute it as your own starter template.
+
 
 ## License – Bilal Ahmad Khan
 
@@ -182,7 +203,7 @@ This React starter template is provided free of charge for building personal or 
 - Resell, redistribute, or republish this project as a starter template, boilerplate, or development kit
 - Claim ownership of the original project structure for educational or starter purposes
 
-Contact me for permission if you wish to use it as a base for another starter/template.
+Contact me for approval if you wish to use it as a base for another starter/template.
 
 - Author: `Bilal Ahmad Khan`
 - Email: `bilal.inform@gmail.com`
