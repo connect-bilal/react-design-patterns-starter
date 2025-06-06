@@ -149,7 +149,7 @@ src/
 │   │   └── Toggle/               # Toggle component for switch or checkbox functionality
 │   │   └── ThemeSwitcher/        # Wrapper component using Toggle & ThemeContext
 │   └── hoc/             # Higher-Order Components
-│   └──├── index.ts         # Central re-export 
+│   └──├── index.ts         # Central re-export
 ├── constants/           # Application-wide constants, enums, and configuration values
 ├── context/                # Global app state with React context
 │   ├── ThemeContext.tsx    # Theme context (light/dark toggle)
@@ -180,13 +180,13 @@ Explore the live Storybook documentation to see the components in action, follow
 🔗 [View Storybook](https://storybook-react-design-patterns.vercel.app)
 
 ## Frequently Asked Questions (FAQs)
+
 **Q: Can I remove components I don’t need?**  
 **A:** To remove unused components, simply delete their folder inside `src/components/common/` and remove their export from  
 `src/components/common/index.ts`.
 
 **Q: Can I use this starter for commercial projects?**  
 **A:** Absolutely! This starter is free to use and modify for personal or commercial projects. Just please don’t redistribute it as your own starter template.
-
 
 ## License – Bilal Ahmad Khan
 
