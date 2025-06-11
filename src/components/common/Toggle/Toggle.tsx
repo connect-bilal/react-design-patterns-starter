@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import { useState, forwardRef } from 'react';
 
+import { uuid } from '../../../utils';
 import Label from '../Label';
 
 import { baseStyles } from './Toggle.styles';
@@ -53,7 +54,7 @@ const Toggle = forwardRef<HTMLInputElement, ToggleProps>(
     const accessibleLabel = label || ariaLabel;
 
     // Auto-generate unique ID if none is provided
-    const inputId = id ?? `toggle-${Math.random().toString(36).slice(2, 7)}`;
+    const inputId = id ?? `toggle-${uuid}`;
 
     // Visual rendering for checkbox or switch variant
     const renderVisual =
