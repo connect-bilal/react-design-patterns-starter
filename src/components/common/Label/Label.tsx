@@ -2,8 +2,7 @@ import clsx from 'clsx';
 import { memo } from 'react';
 
 import { labelBase, labelSizes, labelStates, requiredClass } from './Label.styles';
-import { labelDefaultProps } from './Label.types';
-import type { LabelProps } from './Label.types';
+import { labelDefaultProps, type LabelProps } from './Label.types';
 
 const Label = ({
   children = labelDefaultProps.children,

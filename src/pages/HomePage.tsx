@@ -1,6 +1,4 @@
-import { Text } from '../components';
-import { ThemeSwitcher } from '../components';
-import { Page } from '../components';
+import { Page, Text, ThemeSwitcher } from '@components';
 
 export default function HomePage() {
   return (

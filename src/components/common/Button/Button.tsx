@@ -1,13 +1,10 @@
+import { Icon, Text } from '@components';
 import clsx from 'clsx';
 import { forwardRef, memo } from 'react';
 import { FaSpinner } from 'react-icons/fa';
 
-import Icon from '../Icon';
-import Text from '../Text';
-
 import * as styles from './Button.styles';
-import { buttonDefaultProps } from './Button.types';
-import type { ButtonProps } from './Button.types';
+import { buttonDefaultProps, type ButtonProps } from './Button.types';
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (

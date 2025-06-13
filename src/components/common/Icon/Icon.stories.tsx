@@ -1,7 +1,7 @@
+import { Icon } from '@components';
 import type { Meta, StoryObj } from '@storybook/react';
 import { FaSave, FaTrash, FaDownload, FaBeer } from 'react-icons/fa';
 
-import Icon from './Icon';
 import { iconDefaultProps, iconVariants, iconSizes } from './Icon.types';
 
 const iconOptions = {

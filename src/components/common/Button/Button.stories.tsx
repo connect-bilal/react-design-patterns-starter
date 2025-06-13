@@ -1,9 +1,8 @@
+import { Button } from '@components';
 import type { Meta, StoryObj } from '@storybook/react';
+import { capitalize } from '@utils';
 import { FaDownload } from 'react-icons/fa';
 
-import { capitalize } from '../../../utils/utility';
-
-import Button from './Button';
 import { buttonVariants, buttonSizes, iconPositions } from './Button.types';
 import { buttonDefaultProps } from './Button.types';
 

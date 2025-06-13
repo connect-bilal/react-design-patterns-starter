@@ -1,4 +1,4 @@
-import { disabledStates } from '../../../styles/token';
+import { disabledStates } from '@tokens';
 
 export const labelSizes = {
   sm: 'text-sm',

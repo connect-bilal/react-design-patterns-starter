@@ -1,6 +1,5 @@
+import { useTitle } from '@hooks';
 import type { ReactNode } from 'react';
-
-import { useTitle } from '../../hooks/useTitle';
 
 type PageProps = {
   title?: string;

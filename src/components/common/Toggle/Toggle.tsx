@@ -1,12 +1,10 @@
+import { Label } from '@components';
+import { uuid } from '@utils';
 import clsx from 'clsx';
 import { useState, forwardRef } from 'react';
 
-import { uuid } from '../../../utils';
-import Label from '../Label';
-
 import { baseStyles } from './Toggle.styles';
-import type { ToggleProps } from './Toggle.types';
-import { toggleDefaultProps } from './Toggle.types';
+import { toggleDefaultProps, type ToggleProps } from './Toggle.types';
 
 const Toggle = forwardRef<HTMLInputElement, ToggleProps>(
   (

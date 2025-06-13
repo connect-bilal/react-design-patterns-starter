@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 
-import { ThemeContext } from './ThemeContext';
-import type { Theme } from './ThemeContext';
+import { ThemeContext, type Theme } from './ThemeContext';
 
 const getInitialTheme = (): Theme => {
   if (typeof window === 'undefined') {

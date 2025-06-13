@@ -1,10 +1,8 @@
+import { Icon, Label } from '@components';
+import { mergeRefs } from '@utils';
 import clsx from 'clsx';
 import { forwardRef, useRef, useState, useCallback, useMemo } from 'react';
 import { RxCrossCircled } from 'react-icons/rx';
-
-import { mergeRefs } from '../../../utils';
-import Icon from '../Icon';
-import Label from '../Label';
 
 import { getValidationRules, generateIdFromLabel } from './Input.helper';
 import {

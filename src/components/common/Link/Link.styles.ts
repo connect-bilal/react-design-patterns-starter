@@ -1,4 +1,4 @@
-import { disabledStates, interactiveStates } from '../../../styles/token';
+import { disabledStates, interactiveStates } from '@tokens';
 
 export const linkBase = `inline-flex items-center font-sans no-underline ${interactiveStates}`;
 

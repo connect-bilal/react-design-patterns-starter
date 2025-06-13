@@ -2,8 +2,7 @@ import clsx from 'clsx';
 import { forwardRef, memo } from 'react';
 
 import { textVariants } from './Text.styles';
-import { textDefaultProps } from './Text.types';
-import type { TextProps } from './Text.types';
+import { textDefaultProps, type TextProps } from './Text.types';
 
 const Text = forwardRef<HTMLElement, TextProps>(
   (

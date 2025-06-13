@@ -1,4 +1,4 @@
-import { disabledStates, transitionStates } from '../../../styles/token';
+import { disabledStates, transitionStates } from '@tokens';
 
 export const baseStyles = {
   toggle: `inline-flex items-center cursor-pointer select-none transition-opacity ${transitionStates}`,

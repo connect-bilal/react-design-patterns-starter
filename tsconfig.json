@@ -1,10 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
     "moduleResolution": "Node",
-    "paths": {
-      "@components/*": ["components/common"]
-    },
     "esModuleInterop": true,
     "skipLibCheck": true
   },

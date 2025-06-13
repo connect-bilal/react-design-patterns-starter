@@ -2,8 +2,7 @@ import clsx from 'clsx';
 import { memo } from 'react';
 
 import { linkBase, linkVariants, linkSizes, linkDisabled, linkHover } from './Link.styles';
-import { linkDefaultProps } from './Link.types';
-import type { LinkProps } from './Link.types';
+import { linkDefaultProps, type LinkProps } from './Link.types';
 
 const Link = ({
   children = linkDefaultProps.children,

@@ -1,12 +1,10 @@
+import { mergeRefs } from '@utils';
 import clsx from 'clsx';
 import { forwardRef, memo } from 'react';
 
-import { mergeRefs } from '../../../utils';
-
 import { getIconComponent } from './Icon.helper';
 import * as styles from './Icon.styles';
-import { iconDefaultProps } from './Icon.types';
-import type { IconProps } from './Icon.types';
+import { iconDefaultProps, type IconProps } from './Icon.types';
 
 const Icon = forwardRef<SVGSVGElement, IconProps>(
   (

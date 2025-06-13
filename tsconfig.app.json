@@ -7,6 +7,17 @@
     "module": "ESNext",
     "skipLibCheck": true,
 
+    /* Aliases */
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@components": ["components/index.ts"],
+      "@utils": ["utils/index.ts"],
+      "@hooks": ["hooks/index.ts"],
+      "@styles/*": ["styles/*"],
+      "@tokens": ["styles/tokens"]
+    },
+
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,

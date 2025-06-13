@@ -1,4 +1,4 @@
-import { interactiveStates, disabledStates } from '../../../styles/token';
+import { interactiveStates, disabledStates } from '@styles/tokens';
 
 export const base =
   'inline-flex items-center justify-center gap-2 rounded-md border-0 shadow-md transition-standard cursor-pointer';

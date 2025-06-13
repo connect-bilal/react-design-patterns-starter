@@ -2,8 +2,7 @@ import clsx from 'clsx';
 import { forwardRef } from 'react';
 
 import { dividerStyles } from './Divider.styles';
-import type { DividerProps } from './Divider.types';
-import { dividerDefaultProps } from './Divider.types';
+import { dividerDefaultProps, type DividerProps } from './Divider.types';
 
 const Divider = forwardRef<HTMLDivElement, DividerProps>(
   (

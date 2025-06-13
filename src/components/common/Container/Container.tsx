@@ -1,7 +1,6 @@
+import { useWindowWidth } from '@hooks';
 import clsx from 'clsx';
 import React, { memo, useMemo } from 'react';
-
-import { useWindowWidth } from '../../../hooks/useWindowWidth';
 
 import { getBreakpointLabel } from './Container.helper';
 import * as styles from './Container.styles';
