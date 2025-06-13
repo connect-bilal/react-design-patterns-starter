@@ -1,4 +1,4 @@
-import type { Ref } from 'react';
+import type { Ref, RefCallback } from 'react';
 
 /**
  * Merges multiple React refs into a single ref callback.
@@ -16,8 +16,10 @@ import type { Ref } from 'react';
  * const mergedRef = mergeRefs([ref1, ref2]);
  * <div ref={mergedRef} />
  */
-export function mergeRefs<T>(refs: Array<Ref<T> | undefined>): Ref<T> {
-  return value => {
+
+export const mergeRefs =
+  <T>(refs: Array<Ref<T> | undefined | null>): RefCallback<T> =>
+  value => {
     refs.forEach(ref => {
       if (!ref) {
         return;
@@ -25,8 +27,7 @@ export function mergeRefs<T>(refs: Array<Ref<T> | undefined>): Ref<T> {
       if (typeof ref === 'function') {
         ref(value);
       } else if (typeof ref === 'object' && 'current' in ref) {
-        (ref as React.RefObject<T | null>).current = value;
+        ref.current = value;
       }
     });
   };
-}

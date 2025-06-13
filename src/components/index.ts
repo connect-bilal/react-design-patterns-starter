@@ -8,5 +8,6 @@ export { default as Link } from './common/Link';
 export { default as Text } from './common/Text';
 export { default as Toggle } from './common/Toggle';
 export { default as ThemeSwitcher } from './common/ThemeSwitcher';
+export { default as TruncateText } from './common/TruncateText';
 
 export { default as Page } from './layout/Page';

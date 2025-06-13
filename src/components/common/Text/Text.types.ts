@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react';
+import type { CSSProperties, ReactNode } from 'react';
 
 export type TextTag = (typeof textTags)[number];
 
@@ -6,7 +6,7 @@ export const textTags = ['span', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as con
 
 export interface TextProps {
   as?: TextTag;
-  children: React.ReactNode;
+  children: ReactNode | string;
   className?: string;
   style?: CSSProperties;
   color?: string;
