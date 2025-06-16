@@ -57,7 +57,7 @@ yarn install
 | `react-dom`        | React DOM bindings for rendering to the browser.                 |
 | `react-router-dom` | Declarative routing for React applications.                      |
 | `react-helmet`     | Manage document head for SEO optimization.                       |
-| `classnames`       | Utility for conditionally joining class names.                   |
+| `clsx`             | Utility for conditionally joining class names.                   |
 | `react-icons`      | Popular icons (FontAwesome, Material, etc.) as React components. |
 
 ---
@@ -135,6 +135,7 @@ src/
 ├── assets/              # Static assets like images, fonts, icons, and svgs
 ├── components/          # Reusable UI components following Atomic Design principles
 │   ├── common/          # Base-level atomic components (Button, Text, Container)
+│   │   ├── Alert/               # Alert component
 │   │   ├── Button/               # Button component
 |   │   │   ├── Button.tsx            # Main Button component
 │   │   │   ├── Button.types.ts       # Props types / interfaces
@@ -142,19 +143,30 @@ src/
 │   │   │   ├── Button.stories.ts     # Storybook story
 │   │   │   ├── index.ts              # Re-export for cleaner imports
 │   │   ├── Container/            # Container/layout component
+│   │   ├── Divider/              # Divider component
+│   │   ├── Input/                # Reusable input field component
 │   │   ├── Label/                # Label component
+│   │   ├── Link/                 # Styled wrapper for internal and external links
 │   │   └── Text/                 # Text/typography component
 │   │   ├── Icon/                 # Icon component with SVG support
 │   │   └── Link/                 # Link component with external/internal support
 │   │   └── Toggle/               # Toggle component for switch or checkbox functionality
 │   │   └── ThemeSwitcher/        # Wrapper component using Toggle & ThemeContext
+│   │   └── TruncateText/         # Truncates long text with "Less" and "More" toggle support
 │   └── hoc/             # Higher-Order Components
 │   └──├── index.ts         # Central re-export
+│   └── layouts/            # Reusable layout wrappers and page structures (e.g. Page, AppShell)
+│       ├── index.ts        # Central re-export of layout components
+│       └── Page/           # Page layout component for consistent page structure
 ├── constants/           # Application-wide constants, enums, and configuration values
 ├── context/                # Global app state with React context
 │   ├── ThemeContext.tsx    # Theme context (light/dark toggle)
 │   |── index.ts            # Contexts export
 ├── hooks/               # Custom React hooks for shared logic across app
+│   ├── useTheme.ts         # Manages light/dark theme state and toggle logic
+│   ├── useTitle.ts         # Sets and updates the document title dynamically
+│   ├── useWindowWidth.ts   # Tracks and returns current window width (responsive utility)
+│   └── index.ts            # Central export file for all custom hooks
 ├── i18n/                # Localization files and i18n config (e.g., en.json, fr.json)
 ├── lib/                 # Library modules & integrations (API clients, services)
 │   |── index.ts         # Library export
@@ -168,7 +180,14 @@ src/
 │   └── token.ts         # Design tokens and reusable style constants (colors, spacing, typography, state classes)
 ├── types/               # TypeScript type definitions and interfaces
 ├── utils/               # Utility functions and helpers (formatting, API calls, etc.)
-│   |── index.ts         # Utilities export
+│   ├── capitalize.ts       # Capitalize the first letter of a string
+│   ├── clamp.ts            # Clamp a number between a min and max
+│   ├── isClient.ts         # Check if code is running in a browser environment
+│   ├── isValidLiteral.ts   # Validate if a value matches allowed literals (e.g., enums)
+│   ├── mergeRefs.ts        # Combine multiple refs into one
+│   ├── truncate.ts         # Shorten text with ellipsis based on limit
+│   ├── uuid.ts             # Generate a unique identifier
+│   └── index.ts            # Central export for all utility functions
 ├── App.tsx              # Root application component
 └── index.tsx            # Application entry point, rendering <App />
 ```
