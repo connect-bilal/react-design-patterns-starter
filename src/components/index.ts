@@ -1,3 +1,4 @@
+export { default as Alert } from './common/Alert';
 export { default as Button } from './common/Button';
 export { default as Container } from './common/Container';
 export { default as Divider } from './common/Divider';
