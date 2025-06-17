@@ -150,6 +150,7 @@ src/
 │   │   └── Text/                 # Text/typography component
 │   │   ├── Icon/                 # Icon component with SVG support
 │   │   └── Link/                 # Link component with external/internal support
+│   │   └── SEO/                  # SEO component to manage meta tags (Open Graph, Twitter, etc.)
 │   │   └── Toggle/               # Toggle component for switch or checkbox functionality
 │   │   └── ThemeSwitcher/        # Wrapper component using Toggle & ThemeContext
 │   │   └── TruncateText/         # Truncates long text with "Less" and "More" toggle support
